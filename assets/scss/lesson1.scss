@@ -1,0 +1,137 @@
+@import "font-face";
+@import "commonStyles";
+
+.content__wrapper {
+  h1 {
+    font-weight: 400;
+    font-size: 80px;
+    line-height: 110%;
+    letter-spacing: -0.04em;
+    margin-top: 23px;
+  }
+
+  .content-item {
+    background: #FFFFFF;
+    border-radius: 10px;
+
+    &:not(:last-child) {
+      margin-bottom: 60px;
+    }
+  }
+}
+
+.video-block {
+  padding: 24px 0 32px;
+
+  h2 {
+    padding: 0 40px;
+  }
+
+  .video {
+    margin-top: 20px;
+    margin-bottom: 32px;
+    height: 540px;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  ul {
+    padding: 0 40px;
+
+    li {
+
+      a {
+        color: black;
+        transition: color 0.3s;
+      }
+
+      .pressed {
+        color: #0500FF;
+        transition: color 0.3s;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 12px;
+      }
+      svg {
+        margin-right: 18px;
+      }
+    }
+  }
+}
+
+.materials {
+  padding: 25px 39px 39px;
+  display: flex;
+  flex-direction: column;
+
+  h2 {
+    margin-bottom: 21px;
+  }
+
+  a {
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+}
+
+.checking-hw {
+  padding: 25px 53px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h2 {
+    margin-bottom: 30px;
+  }
+
+  &__avatars {
+    margin-bottom: 25px;
+    display: flex;
+
+    .avatars-item {
+      &:first-child {
+        z-index: 3;
+        margin-right: -17px;
+      }
+      &:nth-child(2) {
+        z-index: 2;
+        margin-right: -17px;
+      }
+    }
+  }
+
+  p {
+    font-size: 30px;
+    line-height: 130%;
+    text-align: center;
+    letter-spacing: -0.02em;
+  }
+
+  .checking-hw__buy-course {
+    margin: 20px auto 0;
+    max-width: 608px;
+    padding: 0 109px;
+    height: 70px;
+  }
+}
+
+.next-lesson {
+  cursor: pointer;
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 38px;
+  align-items: center;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 140%;
+}
+
+@import "webDesignerSkillls/learningProgress";
+@import "webDesignerSkillls/theory";
