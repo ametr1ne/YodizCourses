@@ -1,0 +1,356 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Proxima Nova Rg", sans-serif;
+}
+
+a {
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+
+  li {
+    font-size: 19px;
+  }
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 130%;
+  letter-spacing: -0.02em;
+}
+
+header {
+  background-color: black;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  padding: 0 30px;
+  position: relative;
+  z-index: 10;
+}
+
+.header {
+
+  &__logo {
+    cursor: pointer;
+
+    svg {
+      path {
+        transition: fill 0.2s linear;
+      }
+    }
+
+    &:hover {
+      svg {
+        path {
+          fill: #f00;
+          transition: fill 0.2s linear;
+        }
+      }
+    }
+  }
+
+  &__wrapper {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__burger {
+    display: none;
+
+    @media (max-width: 1440px) {
+      display: block;
+      position: relative;
+      padding: 0;
+      border: 0;
+      cursor: pointer;
+      background: transparent;
+      width: 27px;
+      height: 40px;
+      overflow: hidden;
+      margin-right: 20px;
+      z-index: 10;
+
+      .header__line{
+        display: block;
+        position: absolute;
+        width: 2px;
+        height: 36px;
+        background: #000000;
+        border-radius: 2px;
+        -webkit-transition: 0.25s linear;
+        -moz-transition: 0.25s linear;
+        -ms-transition: 0.25s linear;
+        -o-transition: 0.25s linear;
+        transition: 0.25s linear;
+      }
+      .header__line{
+        background: #ffffff;
+      }
+      .closed .header__line{
+        background: #000;
+      }
+      .header__line--1 {
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        top: -4px;
+        left: 12px;
+      }
+      .header__line--2 {
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        top: 8px;
+        left: 12px;
+      }
+      .header__line--3 {
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        top: 24px;
+        left: 40px;
+      }
+      .header__line--2-fly {
+        top: 35px;
+        left: -15px;
+      }
+      .header__line--3-fly {
+        top: -4px;
+        left: 12px;
+      }
+    }
+  }
+
+  &__btn {
+    height: 54px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+  }
+
+  &__btns {
+    display: flex;
+    grid-column-gap: 20px;
+
+    .header__user-btn {
+      border: 1px solid rgba(196, 196, 196, 0.5);
+      border-radius: 100px;
+      padding-left: 38px;
+      padding-right: 38px;
+      font-weight: 400;
+    }
+  }
+}
+
+a {
+  cursor: pointer;
+  font-size: 19px;
+  line-height: 130%;
+  letter-spacing: -0.02em;
+  color: #0500FF;
+}
+
+.text-grey {
+  color: #A5A5BB;
+}
+
+.main {
+  //display: grid;
+  //grid-template-columns: 1fr 3fr;
+}
+
+.aside {
+  padding: 125px 38px 35px;
+  left: 0;
+  top: 0;
+  position: fixed;
+  background: white;
+  min-width: 480px;
+  overflow-y: scroll;
+
+  &__wrap {
+    position: relative;
+  }
+
+  &__close-btn {
+    position: absolute;
+    right: 25px;
+    top: 20px;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+
+    &:before, &:after {
+      position: absolute;
+      left: 15px;
+      content: '';
+      height: 16px;
+      width: 2px;
+      background-color: #A5A5BB;
+    }
+
+    &:before {
+      transform: rotate(45deg);
+    }
+
+    &:after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  .course {
+    position: relative;
+    margin-bottom: 54px;
+
+    &:not(:first-child) {
+      padding-top: 50px;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #C2C2E7;
+        width: 100%;
+        height: 1px;
+        margin-right: -15px;
+        margin-left: -15px;
+      }
+    }
+
+    &__header {
+      div {
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        a {
+          font-size: 19px;
+        }
+
+        p {
+          font-size: 19px;
+        }
+      }
+    }
+
+    &__progress {
+      margin-top: 44px;
+
+      ul {
+        li {
+          position: relative;
+          font-weight: 400;
+          font-size: 19px;
+          line-height: 130%;
+          border-radius: 100px;
+          margin-left: -15px;
+          margin-right: -15px;
+          cursor: pointer;
+          transition: background 0.3s;
+          display: flex;
+          align-items: center;
+          padding-top: 12px;
+          padding-bottom: 12px;
+          padding-right: 14px;
+
+          &:not(.selected):hover {
+            background: #F8F8FD;
+            transition: background 0.3s;
+          }
+
+          p {
+            padding-left: 48px;
+            display: flex;
+            align-items: center;
+
+            svg {
+              margin-right: 11px;
+            }
+          }
+        }
+
+        .course__block {
+          margin-top: 40px;
+          margin-bottom: 15px;
+        }
+
+        .completed {
+          p {
+            svg {
+              min-width: 8px;
+
+              circle {
+                fill: #8DE300;
+              }
+            }
+          }
+        }
+
+        .selected {
+          background-color: black;
+          color: white;
+        }
+
+        .number {
+          position: absolute;
+          left: 15px;
+        }
+      }
+    }
+  }
+}
+
+.content {
+  padding: 54px 88px 44px 480px;
+  background: #F8F8FD;
+}
+
+/*----- elements ----------*/
+
+.btn {
+  cursor: pointer;
+}
+
+.play-btn {
+  display: flex;
+  background: #0500FF;
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  justify-content: center;
+  align-items: center;
+
+  svg {
+    margin-right: -12px;
+  }
+}
+
+.buy-course__btn {
+  display: flex;
+  padding-left: 40px;
+  padding-right: 40px;
+  background: #0500FF;
+  border-radius: 100px;
+  font-weight: 600;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  font-size: 19px;
+
+  svg {
+    margin-right: 14px;
+  }
+}
