@@ -16,7 +16,7 @@ include 'assets/componets/header.php';
             <a class="breadcrumbs text-grey">Веб-дизайн, быстрый старт / Урок 1</a>
             <h1>Инструменты и навыки веб-дизайнера</h1>
 
-            <!-- progress(start) -->
+            <!-- progress(start)-->
 
             <div class="progress content-item">
                 <div class="progress__title">
