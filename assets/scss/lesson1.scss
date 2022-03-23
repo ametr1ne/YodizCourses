@@ -4,7 +4,7 @@
 .content__wrapper {
   h1 {
     font-weight: 400;
-    font-size: 80px;
+    font-size: 5rem;
     line-height: 110%;
     letter-spacing: -0.04em;
     margin-top: 23px;
@@ -16,6 +16,12 @@
 
     &:not(:last-child) {
       margin-bottom: 60px;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .content-item {
+
     }
   }
 }
@@ -60,6 +66,20 @@
       svg {
         margin-right: 18px;
       }
+    }
+  }
+  
+  @media (max-width: 767px) {
+    h2 {
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+    .video {
+      height: 210px;
+    }
+    ul {
+      padding-left: 15px;
+      padding-right: 15px;
     }
   }
 }
@@ -107,7 +127,7 @@
   }
 
   p {
-    font-size: 30px;
+    font-size: 1.875rem;
     line-height: 130%;
     text-align: center;
     letter-spacing: -0.02em;
@@ -129,9 +149,8 @@
   padding: 0 38px;
   align-items: center;
   font-weight: 600;
-  font-size: 30px;
+  font-size: 1.875rem;
   line-height: 140%;
 }
 
 @import "webDesignerSkillls/learningProgress";
-@import "webDesignerSkillls/theory";

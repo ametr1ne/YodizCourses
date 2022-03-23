@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="assets/scss/lesson1.css">
     <title>Инструменты и навыки веб-дизайнера</title>
 </head>
-<body>
+<body class="mycustom-scroll" data-mcs-theme="3d-dark">
+<div class="dark"></div>
 
 <!-- header(start) -->
 <header class="header">
@@ -41,7 +42,7 @@
                 </svg>
                 Купить курс «Профессия веб-дизайнер»
             </a>
-            <a class="btn header__user-btn header__btn">Дима Зубков</a>
+<!--            <a class="btn header__user-btn header__btn">Дима Зубков</a>-->
         </div>
     </div>
 </header>

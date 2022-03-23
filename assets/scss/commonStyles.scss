@@ -4,25 +4,26 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: "Proxima Nova Rg", sans-serif;
+html {
+  font-size: 16px;
 }
 
-a {
-  font-weight: normal;
+body {
+  font-family: "Proxima Nova Rg", sans-serif;
+  font-size: 1rem;
 }
 
 ul {
   list-style: none;
 
   li {
-    font-size: 19px;
+    font-size: 1.1875rem;
   }
 }
 
 h2 {
   font-weight: 600;
-  font-size: 30px;
+  font-size: 1.875rem;
   line-height: 130%;
   letter-spacing: -0.02em;
 }
@@ -68,66 +69,6 @@ header {
 
   &__burger {
     display: none;
-
-    @media (max-width: 1440px) {
-      display: block;
-      position: relative;
-      padding: 0;
-      border: 0;
-      cursor: pointer;
-      background: transparent;
-      width: 27px;
-      height: 40px;
-      overflow: hidden;
-      margin-right: 20px;
-      z-index: 10;
-
-      .header__line{
-        display: block;
-        position: absolute;
-        width: 2px;
-        height: 36px;
-        background: #000000;
-        border-radius: 2px;
-        -webkit-transition: 0.25s linear;
-        -moz-transition: 0.25s linear;
-        -ms-transition: 0.25s linear;
-        -o-transition: 0.25s linear;
-        transition: 0.25s linear;
-      }
-      .header__line{
-        background: #ffffff;
-      }
-      .closed .header__line{
-        background: #000;
-      }
-      .header__line--1 {
-        -webkit-transform: rotate(45deg);
-        transform: rotate(45deg);
-        top: -4px;
-        left: 12px;
-      }
-      .header__line--2 {
-        -webkit-transform: rotate(45deg);
-        transform: rotate(45deg);
-        top: 8px;
-        left: 12px;
-      }
-      .header__line--3 {
-        -webkit-transform: rotate(-45deg);
-        transform: rotate(-45deg);
-        top: 24px;
-        left: 40px;
-      }
-      .header__line--2-fly {
-        top: 35px;
-        left: -15px;
-      }
-      .header__line--3-fly {
-        top: -4px;
-        left: 12px;
-      }
-    }
   }
 
   &__btn {
@@ -136,7 +77,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 19px;
+    font-size: 1.1875rem;
   }
 
   &__btns {
@@ -155,10 +96,17 @@ header {
 
 a {
   cursor: pointer;
-  font-size: 19px;
+  font-size: 1.1875rem;
   line-height: 130%;
   letter-spacing: -0.02em;
   color: #0500FF;
+  font-weight: normal;
+  transition: color 0.3s;
+
+  &:not(.btn):hover {
+    color: #ff0000;
+    transition: color 0.3s;
+  }
 }
 
 .text-grey {
@@ -170,22 +118,52 @@ a {
   //grid-template-columns: 1fr 3fr;
 }
 
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #F2F2FC;
+  border-radius: 100px;
+}
+
+html {
+  scrollbar-color: #F2F2FC rgba(0, 0, 0, 0); /*Цвет скролла, цвет ползунка*/
+  scrollbar-width: thin;
+}
+
 .aside {
-  padding: 125px 38px 35px;
   left: 0;
   top: 0;
   position: fixed;
   background: white;
+  height: 100%;
   min-width: 480px;
-  overflow-y: scroll;
+
+  .empty {
+    height: 90px;
+  }
 
   &__wrap {
-    position: relative;
+    position: sticky;
+    top: 0;
+    padding: 35px 38px 35px;
+    height: 100%;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+
+    &::-webkit-scrollbar {
+      width: 26px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border: 9px solid #fff;
+    }
   }
 
   &__close-btn {
     position: absolute;
-    right: 25px;
+    right: 9px;
     top: 20px;
     width: 15px;
     height: 15px;
@@ -207,6 +185,11 @@ a {
     &:after {
       transform: rotate(-45deg);
     }
+  }
+
+  .buy-course__btn {
+    display: none;
+    height: 54px;
   }
 
   .course {
@@ -237,11 +220,11 @@ a {
         justify-content: space-between;
 
         a {
-          font-size: 19px;
+          font-size: 1.1875rem;
         }
 
         p {
-          font-size: 19px;
+          font-size: 1.1875rem;
         }
       }
     }
@@ -253,7 +236,7 @@ a {
         li {
           position: relative;
           font-weight: 400;
-          font-size: 19px;
+          font-size: 1.1875rem;
           line-height: 130%;
           border-radius: 100px;
           margin-left: -15px;
@@ -314,8 +297,31 @@ a {
 }
 
 .content {
-  padding: 54px 88px 44px 480px;
+  padding: 54px 88px 44px 90px;
   background: #F8F8FD;
+  margin-left: 480px;
+}
+
+.footer {
+
+  a, p {
+    font-size: 1.1875rem;
+    line-height: 130%;
+  }
+
+  a {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+  .top {
+    display: flex;
+    justify-content: space-between;
+
+  }
+  .bottom {
+    margin-top: 24px;
+  }
 }
 
 /*----- elements ----------*/
@@ -336,6 +342,17 @@ a {
   svg {
     margin-right: -12px;
   }
+
+  @media (max-width: 767px) {
+    height: 70px;
+    width: 70px;
+
+    svg {
+      width: 25px;
+      height: 30px;
+      margin-right: -8px;
+    }
+  }
 }
 
 .buy-course__btn {
@@ -348,9 +365,182 @@ a {
   color: white;
   align-items: center;
   justify-content: center;
-  font-size: 19px;
+  font-size: 1.1875rem;
 
   svg {
     margin-right: 14px;
+  }
+}
+
+.close-aside {
+  .header__burger {
+    display: block;
+  }
+  .aside {
+    left: -100%;
+  }
+}
+
+@media (max-width: 1360px) {
+
+  html {
+    font-size: 14px;
+  }
+
+  .header {
+    &__logo {
+      margin-left: 50px;
+    }
+
+    &__burger {
+      position: absolute;
+      z-index: 10;
+      display: block;
+      padding: 0;
+      border: 0;
+      cursor: pointer;
+      background: transparent;
+      width: 27px;
+      height: 40px;
+      overflow: hidden;
+
+      .header__line{
+        display: block;
+        position: absolute;
+        width: 2px;
+        height: 36px;
+        background: #000000;
+        border-radius: 2px;
+        -webkit-transition: 0.25s linear;
+        -moz-transition: 0.25s linear;
+        -ms-transition: 0.25s linear;
+        -o-transition: 0.25s linear;
+        transition: 0.25s linear;
+      }
+      .header__line{
+        background: #ffffff;
+      }
+      .closed .header__line{
+        background: #000;
+      }
+      .header__line--1 {
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        top: -4px;
+        left: 12px;
+      }
+      .header__line--2 {
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        top: 8px;
+        left: 12px;
+      }
+      .header__line--3 {
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        top: 24px;
+        left: 40px;
+      }
+      .header__line--2-fly {
+        top: 35px;
+        left: -15px;
+      }
+      .header__line--3-fly {
+        top: -4px;
+        left: 12px;
+      }
+    }
+  }
+
+  .aside {
+    left: -100%;
+    transition: left 0.5s ease-out;
+
+    &__close-btn {
+      display: none;
+    }
+    .course {
+      &:not(:first-child) {
+        display: none;
+      }
+
+      &__header {
+        div {
+          display: none;
+        }
+      }
+
+      &__progress {
+        margin-top: 30px;
+      }
+    }
+  }
+
+  .content {
+    padding: 40px 70px 30px 75px;
+    margin-left: 0;
+    &__wrapper {
+      max-width: unset;
+    }
+  }
+
+  .open-aside {
+    overflow: hidden;
+
+    .dark {
+      display: block;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 11;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .header {
+      &__burger {
+        .header__line {
+          background: black;
+        }
+      }
+    }
+    .aside {
+      z-index: 15;
+      left: 0;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+
+  html {
+    font-size: 10px;
+  }
+  .header {
+    height: 64px;
+
+    &__logo {
+      svg {
+        width: 50px;
+      }
+    }
+    &__buy-course {
+      display: none;
+    }
+  }
+
+  .aside {
+    width: 100%;
+    min-width: 100%;
+    .buy-course__btn {
+      display: flex;
+    }
+  }
+
+  .content {
+    padding: 20px 15px 20px 15px;
   }
 }
