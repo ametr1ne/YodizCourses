@@ -48,6 +48,7 @@ header {
 
   &__logo {
     cursor: pointer;
+    transition: margin-left 0.4s;
 
     svg {
       path {
@@ -188,20 +189,6 @@ a {
   color: #A5A5BB;
 }
 
-::-webkit-scrollbar {
-  width: 7px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #F2F2FC;
-  border-radius: 100px;
-}
-
-html {
-  scrollbar-color: #F2F2FC rgba(0, 0, 0, 0); /*Цвет скролла, цвет ползунка*/
-  scrollbar-width: thin;
-}
-
 .aside {
   left: 0;
   top: 0;
@@ -226,42 +213,40 @@ html {
     top: 0;
     padding: 35px 25px 35px 38px;
     height: 100%;
-    overflow-y: scroll;
-    scrollbar-width: thin;
 
-    &::-webkit-scrollbar {
-      width: 26px;
+    .simplebar-track {
+      &.simplebar-vertical {
+        width: 16px;
+
+        .simplebar-scrollbar {
+          &:before {
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background: #F2F2FC;
+            border-radius: 100px;
+            opacity: 1;
+            width: 7px;
+          }
+        }
+      }
     }
 
-    &::-webkit-scrollbar-thumb {
-      border: 9px solid #fff;
+    .simplebar-visible {
+      &:before {
+        opacity: 1;
+      }
     }
   }
 
   &__close-btn {
     position: absolute;
-    right: 9px;
+    right: 25px;
     top: 20px;
     width: 15px;
     height: 15px;
     cursor: pointer;
-
-    &:before, &:after {
-      position: absolute;
-      left: 15px;
-      content: '';
-      height: 16px;
-      width: 2px;
-      background-color: #A5A5BB;
-    }
-
-    &:before {
-      transform: rotate(45deg);
-    }
-
-    &:after {
-      transform: rotate(-45deg);
-    }
   }
 
   .buy-course__btn {
@@ -288,7 +273,6 @@ html {
         margin-bottom: 45px;
         background-color: #C2C2E7;
         height: 1px;
-        margin-right: -15px;
         margin-left: -15px;
       }
     }
@@ -317,7 +301,6 @@ html {
           font-weight: 400;
           border-radius: 100px;
           margin-left: -15px;
-          margin-right: -15px;
           cursor: pointer;
           transition: background 0.3s;
           display: flex;
@@ -379,7 +362,6 @@ html {
   }
   .header__logo {
     margin-left: 50px;
-    transition: margin-left 0.4s;
   }
   .aside {
     left: -100%;

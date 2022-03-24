@@ -5,12 +5,8 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css"/>
     <link rel="stylesheet" href="assets/scss/lesson1.css">
-    <script type="text/javascript" src="scripts/jquery-1.2.6.min.js"></script>
-    <script type="text/javascript" src="scripts/jquery.mousewheel.min.js"></script>
-    <script type="text/javascript" src="scripts/jquery.em.js"></script>
-    <script type="text/javascript" src="scripts/jScrollPane.js"></script>
-    <link rel="stylesheet" type="text/css" media="all" href="styles/jScrollPane.css" />
     <title>Инструменты и навыки веб-дизайнера</title>
 </head>
 <body>

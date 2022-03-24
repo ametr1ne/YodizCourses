@@ -49,9 +49,8 @@ include 'assets/componets/header.php';
 <!-- main(end) -->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
 <script src="https://player.vimeo.com/api/player.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
 <script src="assets/js/script.js"></script>
 
 </body>

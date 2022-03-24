@@ -2,8 +2,15 @@
 
 <aside class="aside">
     <div class="empty"></div>
-    <div class="aside__wrap">
-        <div class="aside__close-btn"></div>
+    <div class="aside__wrap" data-simplebar>
+        <div class="aside__close-btn">
+            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.15631 1.03132L8.15619 8.0312L15.1563 1.03113" stroke="#A5A5BB" stroke-width="2"
+                      stroke-linecap="round"/>
+                <path d="M15.1562 15.0311L8.15628 8.03118L1.15621 15.0313" stroke="#A5A5BB" stroke-width="2"
+                      stroke-linecap="round"/>
+            </svg>
+        </div>
         <div class="aside__courses">
             <div class="course">
                 <div class="course__header">
