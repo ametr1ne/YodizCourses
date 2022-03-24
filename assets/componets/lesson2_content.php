@@ -122,11 +122,13 @@
 <div class="theory content-item video-block">
     <h2>Теория</h2>
     <div class="video">
-        <div class="theory__play-btn play-btn">
-            <svg width="43" height="51" viewBox="0 0 43 51" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0.500274 0.7229L43.0001 25.7178L0.500244 50.7229L0.500274 0.7229Z" fill="white"/>
-            </svg>
-        </div>
+<!--        <div class="theory__play-btn play-btn">-->
+<!--            <svg width="43" height="51" viewBox="0 0 43 51" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+<!--                <path d="M0.500274 0.7229L43.0001 25.7178L0.500244 50.7229L0.500274 0.7229Z" fill="white"/>-->
+<!--            </svg>-->
+<!--        </div>-->
+        <iframe id="theory_video" src="https://player.vimeo.com/video/570300824?h=8d50b301b3" width="100%" height="100%" frameborder="0"
+                allow="autoplay; fullscreen"></iframe>
     </div>
     <ul>
         <li>

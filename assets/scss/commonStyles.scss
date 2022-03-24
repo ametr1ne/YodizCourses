@@ -17,15 +17,20 @@ ul {
   list-style: none;
 
   li {
-    font-size: 1.1875rem;
+    font-size: 19px;
+    line-height: 130%;
   }
 }
 
 h2 {
-  font-weight: 600;
-  font-size: 1.875rem;
+  font-family: "Proxima Nova Sb", sans-serif;
+  font-size: 30px;
   line-height: 130%;
   letter-spacing: -0.02em;
+
+  @media (max-width: 767px) {
+    font-size: 25px;
+  }
 }
 
 header {
@@ -67,17 +72,13 @@ header {
     align-items: center;
   }
 
-  &__burger {
-    display: none;
-  }
-
   &__btn {
     height: 54px;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.1875rem;
+    font-size: 19px;
   }
 
   &__btns {
@@ -94,9 +95,79 @@ header {
   }
 }
 
+.header__burger {
+  position: absolute;
+  z-index: 20;
+  padding: 0;
+  border: 0;
+  display: none;
+  top: 25px;
+  left: 30px;
+  cursor: pointer;
+  background: transparent;
+  width: 27px;
+  height: 40px;
+  overflow: hidden;
+
+  .header__line{
+    display: block;
+    position: absolute;
+    width: 2px;
+    height: 36px;
+    background: #000000;
+    border-radius: 2px;
+    -webkit-transition: 0.25s linear;
+    -moz-transition: 0.25s linear;
+    -ms-transition: 0.25s linear;
+    -o-transition: 0.25s linear;
+    transition: 0.25s linear;
+  }
+  .header__line{
+    background: #ffffff;
+  }
+  .closed .header__line{
+    background: #000;
+  }
+  .header__line--1 {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: -4px;
+    left: 12px;
+  }
+  .header__line--2 {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: 8px;
+    left: 12px;
+    transition-delay: 0.3s;
+  }
+  .header__line--3 {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    top: 24px;
+    left: 40px;
+    transition-delay: 0s;
+  }
+  .header__line--2-fly {
+    top: 35px;
+    left: -15px;
+    transition-delay: 0s;
+  }
+  .header__line--3-fly {
+    top: -4px;
+    left: 12px;
+    transition-delay: 0.3s;
+  }
+  
+  @media (max-width: 767px) {
+    top: 12px;
+    left: 15px;
+  }
+}
+
 a {
   cursor: pointer;
-  font-size: 1.1875rem;
+  font-size: 19px;
   line-height: 130%;
   letter-spacing: -0.02em;
   color: #0500FF;
@@ -107,15 +178,14 @@ a {
     color: #ff0000;
     transition: color 0.3s;
   }
+  
+  @media (max-width: 767px) {
+    font-size: 16px;
+  }
 }
 
 .text-grey {
   color: #A5A5BB;
-}
-
-.main {
-  //display: grid;
-  //grid-template-columns: 1fr 3fr;
 }
 
 ::-webkit-scrollbar {
@@ -138,16 +208,23 @@ html {
   position: fixed;
   background: white;
   height: 100%;
-  min-width: 480px;
+  width: 480px;
+  transition: left 0.5s;
 
   .empty {
     height: 90px;
+    transition: height 0.4s;
+  }
+
+  .hide {
+    height: 0;
+    transition: height 0.4s;
   }
 
   &__wrap {
     position: sticky;
     top: 0;
-    padding: 35px 38px 35px;
+    padding: 35px 25px 35px 38px;
     height: 100%;
     overflow-y: scroll;
     scrollbar-width: thin;
@@ -188,24 +265,28 @@ html {
   }
 
   .buy-course__btn {
-    display: none;
     height: 54px;
+    width: auto;
+    display: none;
+    margin-right: -15px;
+    margin-left: -15px;
+
+    svg {
+      display: none;
+    }
   }
 
   .course {
     position: relative;
-    margin-bottom: 54px;
+    margin-bottom: 42px;
 
     &:not(:first-child) {
-      padding-top: 50px;
-
       &:before {
         content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
+        position: relative;
+        display: block;
+        margin-bottom: 45px;
         background-color: #C2C2E7;
-        width: 100%;
         height: 1px;
         margin-right: -15px;
         margin-left: -15px;
@@ -217,27 +298,23 @@ html {
         margin-top: 10px;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
-
-        a {
-          font-size: 1.1875rem;
-        }
 
         p {
-          font-size: 1.1875rem;
+          font-size: 19px;
+        }
+        .price {
+          margin-right: 28px;
         }
       }
     }
 
     &__progress {
-      margin-top: 44px;
+      margin-top: 32px;
 
       ul {
         li {
           position: relative;
           font-weight: 400;
-          font-size: 1.1875rem;
-          line-height: 130%;
           border-radius: 100px;
           margin-left: -15px;
           margin-right: -15px;
@@ -266,8 +343,8 @@ html {
         }
 
         .course__block {
-          margin-top: 40px;
-          margin-bottom: 15px;
+          margin-top: 33px;
+          margin-bottom: 7px;
         }
 
         .completed {
@@ -296,17 +373,36 @@ html {
   }
 }
 
+.close-aside {
+  .header__burger {
+    display: block;
+  }
+  .header__logo {
+    margin-left: 50px;
+    transition: margin-left 0.4s;
+  }
+  .aside {
+    left: -100%;
+  }
+
+  .content {
+    margin-left: 0;
+  }
+}
+
 .content {
-  padding: 54px 88px 44px 90px;
+  padding: 54px 88px 45px 90px;
   background: #F8F8FD;
   margin-left: 480px;
+  transition: margin-left 0.5s;
 }
 
 .footer {
 
-  a, p {
-    font-size: 1.1875rem;
+  p {
+    font-size: 19px;
     line-height: 130%;
+    padding-right: 15px;
   }
 
   a {
@@ -317,7 +413,8 @@ html {
   .top {
     display: flex;
     justify-content: space-between;
-
+    flex-wrap: wrap;
+    grid-row-gap: 20px;
   }
   .bottom {
     margin-top: 24px;
@@ -328,6 +425,7 @@ html {
 
 .btn {
   cursor: pointer;
+  font-family: "Proxima Nova Sb", sans-serif;
 }
 
 .play-btn {
@@ -357,29 +455,34 @@ html {
 
 .buy-course__btn {
   display: flex;
-  padding-left: 40px;
-  padding-right: 40px;
   background: #0500FF;
   border-radius: 100px;
-  font-weight: 600;
   color: white;
   align-items: center;
   justify-content: center;
-  font-size: 1.1875rem;
+  font-size: 19px;
+  width: 470px;
+  padding-left: 10px;
+  padding-right: 10px;
 
   svg {
     margin-right: 14px;
   }
+
+  @media (max-width: 767px) {
+    width: 100%;
+    svg {
+      display: none;
+    }
+  }
 }
 
-.close-aside {
-  .header__burger {
-    display: block;
-  }
-  .aside {
-    left: -100%;
-  }
-}
+//::-webkit-scrollbar { /* for Mac OS X support */
+//  width: 0;
+//}
+
+
+/*--------- elements(end) -----------------*/
 
 @media (max-width: 1360px) {
 
@@ -393,62 +496,7 @@ html {
     }
 
     &__burger {
-      position: absolute;
-      z-index: 10;
       display: block;
-      padding: 0;
-      border: 0;
-      cursor: pointer;
-      background: transparent;
-      width: 27px;
-      height: 40px;
-      overflow: hidden;
-
-      .header__line{
-        display: block;
-        position: absolute;
-        width: 2px;
-        height: 36px;
-        background: #000000;
-        border-radius: 2px;
-        -webkit-transition: 0.25s linear;
-        -moz-transition: 0.25s linear;
-        -ms-transition: 0.25s linear;
-        -o-transition: 0.25s linear;
-        transition: 0.25s linear;
-      }
-      .header__line{
-        background: #ffffff;
-      }
-      .closed .header__line{
-        background: #000;
-      }
-      .header__line--1 {
-        -webkit-transform: rotate(45deg);
-        transform: rotate(45deg);
-        top: -4px;
-        left: 12px;
-      }
-      .header__line--2 {
-        -webkit-transform: rotate(45deg);
-        transform: rotate(45deg);
-        top: 8px;
-        left: 12px;
-      }
-      .header__line--3 {
-        -webkit-transform: rotate(-45deg);
-        transform: rotate(-45deg);
-        top: 24px;
-        left: 40px;
-      }
-      .header__line--2-fly {
-        top: 35px;
-        left: -15px;
-      }
-      .header__line--3-fly {
-        top: -4px;
-        left: 12px;
-      }
     }
   }
 
@@ -458,6 +506,10 @@ html {
 
     &__close-btn {
       display: none;
+    }
+
+    .buy-course__btn {
+      display: flex;
     }
     .course {
       &:not(:first-child) {
@@ -477,7 +529,7 @@ html {
   }
 
   .content {
-    padding: 40px 70px 30px 75px;
+    padding: 40px 35px 30px 35px;
     margin-left: 0;
     &__wrapper {
       max-width: unset;
@@ -523,6 +575,7 @@ html {
     height: 64px;
 
     &__logo {
+      margin-left: 30px;
       svg {
         width: 50px;
       }
@@ -532,15 +585,83 @@ html {
     }
   }
 
+  ul {
+    li {
+      font-size: 16px;
+    }
+  }
+
+  .buy-course__btn {
+    font-size: 16px;
+  }
+
   .aside {
     width: 100%;
     min-width: 100%;
     .buy-course__btn {
-      display: flex;
+      margin-right: -10px;
+      margin-left: -10px;
+    }
+
+    .empty {
+      height: 50px;
+    }
+
+    &__wrap {
+      padding: 20px 15px 25px;
+      overflow: hidden;
+    }
+
+    .course {
+      margin-bottom: 25px;
+
+      &__progress {
+        margin-top: 12px;
+
+        ul {
+          li {
+            margin-right: -10px;
+            margin-left: -10px;
+          }
+        }
+      }
     }
   }
 
   .content {
     padding: 20px 15px 20px 15px;
+  }
+
+  .footer {
+    p {
+      font-size: 16px;
+    }
+
+    .top {
+      grid-row-gap: 12px;
+    }
+
+    .bottom {
+      margin-top: 0;
+
+      a {
+        margin-bottom: 12px;
+      }
+    }
+
+    .messengers {
+      display: flex;
+      flex-wrap: wrap;
+
+      a {
+        margin-bottom: 12px;
+      }
+    }
+
+    a {
+      &:not(:last-child) {
+        margin-right: 15px;
+      }
+    }
   }
 }

@@ -9,7 +9,13 @@ $('.lessons-list li').each(function (i) {
 })
 
 $('.number').each(function (i) {
-    $(this).text(i+1)
+    $(this).text(i + 1)
+})
+
+$(document).on('ready', function () {
+    let toolsHeight = $('.tools').outerHeight(true)
+    console.log(toolsHeight)
+    $('.progress__categories').css('max-height', toolsHeight + 'px')
 })
 
 
@@ -59,8 +65,8 @@ $(window).on('scroll', function () {
     let scroll = $(document).scrollTop()
 
     if (scroll >= 90) {
-        $('.empty').hide()
-    } else $('.empty').show()
+        $('.empty').addClass('hide')
+    } else $('.empty').removeClass('hide')
 })
 
 // $('.header__burger').on('click', function () {
@@ -71,60 +77,59 @@ $(window).on('scroll', function () {
 //     $('body').removeClass('open-aside')
 // })
 
-var animationEnd = true;
+$('.header__burger').on('click', function () {
+    $('body').toggleClass('open-aside')
+    $('body').removeClass('close-aside')
+    if ($('.header__burger').hasClass('closed')) {
 
-$('.header__burger').click(function() {
-    if(animationEnd) {
-        animationEnd = false;
-        $('body').toggleClass('open-aside')
-        if ($('.header__burger').hasClass('closed')){
+        if (!window.matchMedia("(min-width: 1360px)").matches) {
             $('.header__line--3').removeClass('header__line--3-fly');
             $('.header__burger').removeClass('closed');
-            $('.dark').hide()
-
-            setTimeout(function(){
-                $('.header__line--2').removeClass('header__line--2-fly');
-            }, 300);
+            $('.header__line--2').removeClass('header__line--2-fly');
         }
-        else{
+    } else {
+        $('.header__burger').addClass('closed');
+
+        if (!window.matchMedia("(min-width: 1360px)").matches) {
             $('.header__line--2').addClass('header__line--2-fly');
-            $('.header__burger').addClass('closed');
-
-            setTimeout(function(){
-                $('.header__line--3').addClass('header__line--3-fly');
-            }, 300);
+            $('.header__line--3').addClass('header__line--3-fly');
         }
-        setTimeout(function(){
-            animationEnd = true;
-        }, 600);
     }
 });
+
 $('.dark').on('click', function () {
     $('body').removeClass('open-aside')
     $('.header__line--3').removeClass('header__line--3-fly');
     $('.header__burger').removeClass('closed');
-
-    setTimeout(function(){
-        $('.header__line--2').removeClass('header__line--2-fly');
-    }, 300);
+    $('.header__line--2').removeClass('header__line--2-fly');
 })
 
 $('.aside__close-btn').on('click', function () {
     $('body').addClass('close-aside')
+
+    // $('.header__burger').addClass('closed')
 })
-// (function($) {
-//     $(window).on('load', function() {
-//         $('.mycustom-scroll').mCustomScrollbar();
-//     });
-// })(jQuery);
-//
-// $('.mycustom-scroll').mCustomScrollbar({
-//     axis: 'y',              // вертикальный скролл
-//     theme: 'rounded-dark',  // тема
-//     scrollInertia: '330',   // продолжительность прокрутки, значение в миллисекундах
-//     setHeight: '100%',      // высота блока (переписывает CSS)
-//     mouseWheel: {
-//         deltaFactor: 300    // кол-во пикселей на одну прокрутку колёсика мыши
-//     }
-// });
+
+/*----- обработка таймкодов ---------*/
+
+const iframe = $('#theory_video');
+let player = new Vimeo.Player(iframe);
+
+const timecodes = [
+    {id: '1', name: 'Какие инструменты изучать, какие навыки развивать?', time: 30},
+    {id: '2', name: 'Figma — бесплатно, быстро, просто', time: 341},
+    {id: '3', name: 'Векторная и растровая графика', time: 123},
+    {id: '4', name: 'Что делает веб-дизайнер?', time: 233},
+    {id: '5', name: 'Photoshop для веб-дизайнера', time: 324},
+    {id: '6', name: 'Зачем Illustrator веб-дизайнеру?', time: 233},
+    {id: '7', name: 'Самые полезные горячие клавиши для работы', time: 345},
+    {id: '8', name: 'Как собрать портфолио, не имея коммерческих заказов?', time: 324},
+]
+
+$('.timecode').each(function (index) {
+    $(this).on('click', function () {
+        player.setCurrentTime(timecodes[index].time)
+        player.play();
+    })
+})
 

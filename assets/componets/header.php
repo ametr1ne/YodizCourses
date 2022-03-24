@@ -6,19 +6,23 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="assets/scss/lesson1.css">
+    <script type="text/javascript" src="scripts/jquery-1.2.6.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery.mousewheel.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery.em.js"></script>
+    <script type="text/javascript" src="scripts/jScrollPane.js"></script>
+    <link rel="stylesheet" type="text/css" media="all" href="styles/jScrollPane.css" />
     <title>Инструменты и навыки веб-дизайнера</title>
 </head>
-<body class="mycustom-scroll" data-mcs-theme="3d-dark">
+<body>
 <div class="dark"></div>
-
+<button type="button" class="header__burger">
+    <span class="header__line header__line--1"></span>
+    <span class="header__line header__line--2"></span>
+    <span class="header__line header__line--3"></span>
+</button>
 <!-- header(start) -->
 <header class="header">
     <div class="header__wrapper">
-        <button type="button" class="header__burger">
-            <span class="header__line header__line--1"></span>
-            <span class="header__line header__line--2"></span>
-            <span class="header__line header__line--3"></span>
-        </button>
         <div class="header__logo">
             <svg width="70" height="54" viewBox="0 0 70 54" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M52.0732 0.263916H17.9268L0 18.3755L35 53.7361L70 18.3755L52.0732 0.263916ZM40.0707 26.1548V39.0744H29.9293V26.1548L17.9268 14.0115L23.8512 8.02601L35 19.2897L46.1488 8.02601L52.0732 14.0115L40.0707 26.1548Z"
