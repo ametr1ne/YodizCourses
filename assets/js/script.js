@@ -42,6 +42,18 @@ $('.theory .timecode').each(function (index) {
     })
 })
 
+function removingEmptyBlock() {
+    let scroll = $(document).scrollTop()
+
+    if (scroll >= 90) {
+        $('.empty').addClass('hide')
+        $('.aside__wrap').addClass('changeHeight')
+    } else {
+        $('.empty').removeClass('hide')
+        $('.aside__wrap').removeClass('changeHeight')
+    }
+}
+
 $('.homework .timecode').each(function (index) {
     $(this).on('click', function () {
 
@@ -61,21 +73,17 @@ $('.homework .timecode').each(function (index) {
     })
 })
 
-$(window).on('scroll', function () {
-    let scroll = $(document).scrollTop()
+removingEmptyBlock()
 
-    if (scroll >= 90) {
-        $('.empty').addClass('hide')
-    } else $('.empty').removeClass('hide')
+$(document).on('scroll', function () {
+    removingEmptyBlock()
 })
 
-// $('.header__burger').on('click', function () {
-//     $('body').toggleClass('open-aside')
-// })
-//
-// $('.dark').on('click', function () {
-//     $('body').removeClass('open-aside')
-// })
+function videoResize() {
+    let videoWidth = $('.video').outerWidth()
+    let videoHeight = videoWidth * 0.628
+    $('.video').css('height', videoHeight + 'px')
+}
 
 $('.header__burger').on('click', function () {
     $('body').toggleClass('open-aside')
@@ -106,16 +114,16 @@ $('.dark').on('click', function () {
 
 $('.aside__close-btn').on('click', function () {
     $('body').addClass('close-aside')
-
-    // $('.header__burger').addClass('closed')
 })
 
 /*----- обработка таймкодов ---------*/
 
-const iframe = $('#theory_video');
-let player = new Vimeo.Player(iframe);
+const iframeTheory = $('#theory_video');
+const iframeHomework = $('#homework_video');
+let player = new Vimeo.Player(iframeTheory);
+let player2 = new Vimeo.Player(iframeHomework);
 
-const timecodes = [
+const theoryTimecodes = [
     {id: '1', name: 'Какие инструменты изучать, какие навыки развивать?', time: 30},
     {id: '2', name: 'Figma — бесплатно, быстро, просто', time: 341},
     {id: '3', name: 'Векторная и растровая графика', time: 123},
@@ -126,10 +134,33 @@ const timecodes = [
     {id: '8', name: 'Как собрать портфолио, не имея коммерческих заказов?', time: 324},
 ]
 
-$('.timecode').each(function (index) {
+const homeworkTimecodes = [
+    {id: '1', time: 30},
+    {id: '2', time: 341},
+]
+
+$('.timecode-theory').each(function (index) {
     $(this).on('click', function () {
-        player.setCurrentTime(timecodes[index].time)
+        player.setCurrentTime(theoryTimecodes[index].time)
         player.play();
     })
 })
 
+$('.timecode-homework').each(function (index) {
+    $(this).on('click', function () {
+        player2.setCurrentTime(homeworkTimecodes[index].time)
+        player2.play();
+    })
+})
+
+/*----- Изменение высоты видео-контейнера -------------*/
+
+videoResize()
+
+$(".content").on('transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransitionEnd', function() {
+    videoResize()
+});
+
+$(window).on('resize', function () {
+    videoResize()
+})

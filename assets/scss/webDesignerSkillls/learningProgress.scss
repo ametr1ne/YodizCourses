@@ -77,7 +77,7 @@
       justify-content: space-between;
       grid-column-gap: 57px;
       overflow: hidden;
-      max-height: 300px;
+      max-height: 320px;
       transition: max-height 0.4s;
 
       .tools {
@@ -106,7 +106,6 @@
           }
           .bar__green {
             margin-top: -3px;
-            width: 3%;
             height: 3px;
             background: #8DE300;
           }

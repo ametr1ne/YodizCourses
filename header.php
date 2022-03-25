@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css"/>
     <link rel="stylesheet" href="assets/scss/lesson1.css">
     <title>Инструменты и навыки веб-дизайнера</title>
+<!--    --><?php //wp_head();?>
 </head>
 <body>
 <div class="dark"></div>
@@ -42,7 +43,7 @@
                 </svg>
                 Купить курс «Профессия веб-дизайнер»
             </a>
-<!--            <a class="btn header__user-btn header__btn">Дима Зубков</a>-->
+            <!--            <a class="btn header__user-btn header__btn">Дима Зубков</a>-->
         </div>
     </div>
 </header>

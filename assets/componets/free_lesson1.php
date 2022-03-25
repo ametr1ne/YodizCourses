@@ -30,41 +30,41 @@
                 <div class="tools__item">
                     <div class="tools__title">
                         <small class="tools__name text-grey">Figma</small>
-                        <small class="tools__percent text-grey">2%</small>
+                        <small class="tools__percent text-grey">6%</small>
                     </div>
                     <div class="tools__bar">
                         <div class="bar__grey"></div>
-                        <div class="bar__green"></div>
+                        <div style="width: 6%" class="bar__green"></div>
                     </div>
                 </div>
                 <div class="tools__item">
                     <div class="tools__title">
                         <small class="tools__name text-grey">Photoshop</small>
-                        <small class="tools__percent text-grey">15%</small>
+                        <small class="tools__percent text-grey">6%</small>
                     </div>
                     <div class="tools__bar">
                         <div class="bar__grey"></div>
-                        <div class="bar__green"></div>
+                        <div style="width: 6%" class="bar__green"></div>
                     </div>
                 </div>
                 <div class="tools__item">
                     <div class="tools__title">
                         <small class="tools__name text-grey">Illustrator</small>
-                        <small class="tools__percent text-grey">0%</small>
+                        <small class="tools__percent text-grey">11%</small>
                     </div>
                     <div class="tools__bar">
                         <div class="bar__grey"></div>
-                        <div class="bar__green"></div>
+                        <div style="width: 11%" class="bar__green"></div>
                     </div>
                 </div>
                 <div class="tools__item">
                     <div class="tools__title">
                         <small class="tools__name text-grey">Animate</small>
-                        <small class="tools__percent text-grey">3%</small>
+                        <small class="tools__percent text-grey">11%</small>
                     </div>
                     <div class="tools__bar">
                         <div class="bar__grey"></div>
-                        <div class="bar__green"></div>
+                        <div style="width: 11%" class="bar__green"></div>
                     </div>
                 </div>
             </div>
@@ -72,42 +72,42 @@
                 <h3>Навыки</h3>
                 <div class="tools__item">
                     <div class="tools__title">
-                        <small class="tools__name text-grey">Figma</small>
-                        <small class="tools__percent text-grey">2%</small>
-                    </div>
-                    <div class="tools__bar">
-                        <div class="bar__grey"></div>
-                        <div class="bar__green"></div>
-                    </div>
-                </div>
-                <div class="tools__item">
-                    <div class="tools__title">
-                        <small class="tools__name text-grey">Photoshop</small>
-                        <small class="tools__percent text-grey">15%</small>
-                    </div>
-                    <div class="tools__bar">
-                        <div class="bar__grey"></div>
-                        <div class="bar__green"></div>
-                    </div>
-                </div>
-                <div class="tools__item">
-                    <div class="tools__title">
-                        <small class="tools__name text-grey">Illustrator</small>
-                        <small class="tools__percent text-grey">0%</small>
-                    </div>
-                    <div class="tools__bar">
-                        <div class="bar__grey"></div>
-                        <div class="bar__green"></div>
-                    </div>
-                </div>
-                <div class="tools__item">
-                    <div class="tools__title">
-                        <small class="tools__name text-grey">Animate</small>
+                        <small class="tools__name text-grey">Уровень нормы</small>
                         <small class="tools__percent text-grey">3%</small>
                     </div>
                     <div class="tools__bar">
                         <div class="bar__grey"></div>
-                        <div class="bar__green"></div>
+                        <div style="width: 3%" class="bar__green"></div>
+                    </div>
+                </div>
+                <div class="tools__item">
+                    <div class="tools__title">
+                        <small class="tools__name text-grey">Технический дизайн</small>
+                        <small class="tools__percent text-grey">6%</small>
+                    </div>
+                    <div class="tools__bar">
+                        <div class="bar__grey"></div>
+                        <div style="width: 6%" class="bar__green"></div>
+                    </div>
+                </div>
+                <div class="tools__item">
+                    <div class="tools__title">
+                        <small class="tools__name text-grey">UX/UI</small>
+                        <small class="tools__percent text-grey">8%</small>
+                    </div>
+                    <div class="tools__bar">
+                        <div class="bar__grey"></div>
+                        <div style="width: 8%" class="bar__green"></div>
+                    </div>
+                </div>
+                <div class="tools__item">
+                    <div class="tools__title">
+                        <small class="tools__name text-grey">Моушн-дизайн</small>
+                        <small class="tools__percent text-grey">10%</small>
+                    </div>
+                    <div class="tools__bar">
+                        <div class="bar__grey"></div>
+                        <div style="width: 10%" class="bar__green"></div>
                     </div>
                 </div>
             </div>
@@ -122,17 +122,12 @@
 <div class="theory content-item video-block">
     <h2>Теория</h2>
     <div class="video">
-<!--        <div class="theory__play-btn play-btn">-->
-<!--            <svg width="43" height="51" viewBox="0 0 43 51" fill="none" xmlns="http://www.w3.org/2000/svg">-->
-<!--                <path d="M0.500274 0.7229L43.0001 25.7178L0.500244 50.7229L0.500274 0.7229Z" fill="white"/>-->
-<!--            </svg>-->
-<!--        </div>-->
         <iframe id="theory_video" src="https://player.vimeo.com/video/570300824?h=8d50b301b3" width="100%" height="100%" frameborder="0"
                 allow="autoplay; fullscreen"></iframe>
     </div>
     <ul>
         <li>
-            <a class="timecode">
+            <a class="timecode timecode-theory">
                 <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
                      xmlns="http://www.w3.org/2000/svg">
                     <circle cx="4.71875" cy="4" r="4" fill="#D0D0E1"/>
@@ -141,7 +136,7 @@
             </a>
         </li>
         <li>
-            <a class="timecode">
+            <a class="timecode timecode-theory">
                 <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
                      xmlns="http://www.w3.org/2000/svg">
                     <circle cx="4.71875" cy="4" r="4" fill="#D0D0E1"/>
@@ -149,7 +144,7 @@
                 Figma — бесплатно, быстро, просто
             </a></li>
         <li>
-            <a class="timecode">
+            <a class="timecode timecode-theory">
                 <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
                      xmlns="http://www.w3.org/2000/svg">
                     <circle cx="4.71875" cy="4" r="4" fill="#D0D0E1"/>
@@ -157,7 +152,7 @@
                 Векторная и растровая графика
             </a></li>
         <li>
-            <a class="timecode">
+            <a class="timecode timecode-theory">
                 <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
                      xmlns="http://www.w3.org/2000/svg">
                     <circle cx="4.71875" cy="4" r="4" fill="#D0D0E1"/>
@@ -165,7 +160,7 @@
                 Что делает веб-дизайнер?
             </a></li>
         <li>
-            <a class="timecode">
+            <a class="timecode timecode-theory">
                 <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
                      xmlns="http://www.w3.org/2000/svg">
                     <circle cx="4.71875" cy="4" r="4" fill="#D0D0E1"/>
@@ -173,7 +168,7 @@
                 Photoshop для веб-дизайнера
             </a></li>
         <li>
-            <a class="timecode">
+            <a class="timecode timecode-theory">
                 <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
                      xmlns="http://www.w3.org/2000/svg">
                     <circle cx="4.71875" cy="4" r="4" fill="#D0D0E1"/>
@@ -181,7 +176,7 @@
                 Зачем Illustrator веб-дизайнеру?
             </a></li>
         <li>
-            <a class="timecode">
+            <a class="timecode timecode-theory">
                 <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
                      xmlns="http://www.w3.org/2000/svg">
                     <circle cx="4.71875" cy="4" r="4" fill="#D0D0E1"/>
@@ -189,7 +184,7 @@
                 Самые полезные горячие клавиши для работы
             </a></li>
         <li>
-            <a class="timecode">
+            <a class="timecode timecode-theory">
                 <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
                      xmlns="http://www.w3.org/2000/svg">
                     <circle cx="4.71875" cy="4" r="4" fill="#D0D0E1"/>
@@ -206,15 +201,12 @@
 <div class="homework content-item video-block">
     <h2>Практика + домашнее задание</h2>
     <div class="video">
-        <div class="homework__play-btn play-btn">
-            <svg width="43" height="51" viewBox="0 0 43 51" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0.500274 0.7229L43.0001 25.7178L0.500244 50.7229L0.500274 0.7229Z" fill="white"/>
-            </svg>
-        </div>
+        <iframe id="homework_video" src="https://player.vimeo.com/video/570300824?h=8d50b301b3" height="100%" width="100%" frameborder="0"
+                allow="autoplay; fullscreen"></iframe>
     </div>
     <ul>
         <li>
-            <a class="timecode">
+            <a class="timecode timecode-homework">
                 <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
                      xmlns="http://www.w3.org/2000/svg">
                     <circle cx="4.71875" cy="4" r="4" fill="#D0D0E1"/>
@@ -223,7 +215,7 @@
             </a>
         </li>
         <li>
-            <a class="timecode">
+            <a class="timecode timecode-homework">
                 <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
                      xmlns="http://www.w3.org/2000/svg">
                     <circle cx="4.71875" cy="4" r="4" fill="#D0D0E1"/>

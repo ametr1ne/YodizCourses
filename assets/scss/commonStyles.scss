@@ -101,16 +101,18 @@ header {
   z-index: 20;
   padding: 0;
   border: 0;
-  display: none;
   top: 25px;
   left: 30px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.4s;
   cursor: pointer;
   background: transparent;
   width: 27px;
   height: 40px;
   overflow: hidden;
 
-  .header__line{
+  .header__line {
     display: block;
     position: absolute;
     width: 2px;
@@ -123,18 +125,22 @@ header {
     -o-transition: 0.25s linear;
     transition: 0.25s linear;
   }
-  .header__line{
+
+  .header__line {
     background: #ffffff;
   }
-  .closed .header__line{
+
+  .closed .header__line {
     background: #000;
   }
+
   .header__line--1 {
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
     top: -4px;
     left: 12px;
   }
+
   .header__line--2 {
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
@@ -142,6 +148,7 @@ header {
     left: 12px;
     transition-delay: 0.3s;
   }
+
   .header__line--3 {
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
@@ -149,17 +156,19 @@ header {
     left: 40px;
     transition-delay: 0s;
   }
+
   .header__line--2-fly {
     top: 35px;
     left: -15px;
     transition-delay: 0s;
   }
+
   .header__line--3-fly {
     top: -4px;
     left: 12px;
     transition-delay: 0.3s;
   }
-  
+
   @media (max-width: 767px) {
     top: 12px;
     left: 15px;
@@ -179,7 +188,7 @@ a {
     color: #ff0000;
     transition: color 0.3s;
   }
-  
+
   @media (max-width: 767px) {
     font-size: 16px;
   }
@@ -212,7 +221,7 @@ a {
     position: sticky;
     top: 0;
     padding: 35px 25px 35px 38px;
-    height: 100%;
+    height: calc(100% - 90px);
 
     .simplebar-track {
       &.simplebar-vertical {
@@ -220,7 +229,7 @@ a {
 
         .simplebar-scrollbar {
           &:before {
-            top: 0;
+            top: 9px;
             right: 0;
             left: 0;
             bottom: 0;
@@ -238,6 +247,10 @@ a {
         opacity: 1;
       }
     }
+  }
+
+  .changeHeight {
+    height: 100%;
   }
 
   &__close-btn {
@@ -286,6 +299,7 @@ a {
         p {
           font-size: 19px;
         }
+
         .price {
           margin-right: 28px;
         }
@@ -358,19 +372,31 @@ a {
 
 .close-aside {
   .header__burger {
-    display: block;
+    visibility: visible;
+    opacity: 1;
   }
+
   .header__logo {
     margin-left: 50px;
   }
+
   .aside {
-    left: -100%;
+    left: -480px;
   }
 
   .content {
     margin-left: 0;
   }
 }
+
+//@keyframes closingAside {
+//  0% {
+//    margin-left: 480px;
+//  }
+//  100% {
+//      margin-left: 0;
+//  }
+//}
 
 .content {
   padding: 54px 88px 45px 90px;
@@ -392,12 +418,14 @@ a {
       margin-right: 30px;
     }
   }
+
   .top {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     grid-row-gap: 20px;
   }
+
   .bottom {
     margin-top: 24px;
   }
@@ -446,9 +474,14 @@ a {
   width: 470px;
   padding-left: 10px;
   padding-right: 10px;
+  transition: background 0.3s;
 
   svg {
     margin-right: 14px;
+  }
+
+  &:hover {
+    background: #ff0000;
   }
 
   @media (max-width: 767px) {
@@ -478,7 +511,9 @@ a {
     }
 
     &__burger {
-      display: block;
+      left: 30px;
+      visibility: visible;
+      opacity: 1;
     }
   }
 
@@ -493,6 +528,7 @@ a {
     .buy-course__btn {
       display: flex;
     }
+
     .course {
       &:not(:first-child) {
         display: none;
@@ -513,6 +549,7 @@ a {
   .content {
     padding: 40px 35px 30px 35px;
     margin-left: 0;
+
     &__wrapper {
       max-width: unset;
     }
@@ -541,6 +578,7 @@ a {
         }
       }
     }
+
     .aside {
       z-index: 15;
       left: 0;
@@ -558,10 +596,16 @@ a {
 
     &__logo {
       margin-left: 30px;
+
       svg {
         width: 50px;
       }
     }
+
+    &__burger {
+      left: 15px;
+    }
+
     &__buy-course {
       display: none;
     }
@@ -580,6 +624,7 @@ a {
   .aside {
     width: 100%;
     min-width: 100%;
+
     .buy-course__btn {
       margin-right: -10px;
       margin-left: -10px;
