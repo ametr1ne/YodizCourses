@@ -42,17 +42,17 @@ $('.theory .timecode').each(function (index) {
     })
 })
 
-function removingEmptyBlock() {
-    let scroll = $(document).scrollTop()
-
-    if (scroll >= 90) {
-        $('.empty').addClass('hide')
-        $('.aside__wrap').addClass('changeHeight')
-    } else {
-        $('.empty').removeClass('hide')
-        $('.aside__wrap').removeClass('changeHeight')
-    }
-}
+// function removingEmptyBlock() {
+//     let scroll = $(document).scrollTop()
+//
+//     if (scroll >= 90) {
+//         $('.empty').addClass('hide')
+//         $('.aside__wrap').addClass('changeHeight')
+//     } else {
+//         $('.empty').removeClass('hide')
+//         $('.aside__wrap').removeClass('changeHeight')
+//     }
+// }
 
 $('.homework .timecode').each(function (index) {
     $(this).on('click', function () {
@@ -73,11 +73,11 @@ $('.homework .timecode').each(function (index) {
     })
 })
 
-removingEmptyBlock()
+// removingEmptyBlock()
 
-$(document).on('scroll', function () {
-    removingEmptyBlock()
-})
+// $('.aside__wrap').on('scroll', function () {
+//     $('.aside__wrap').addClass('changeHeight');
+// })
 
 function videoResize() {
     let videoWidth = $('.video').outerWidth()
