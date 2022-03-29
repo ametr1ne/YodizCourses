@@ -201,14 +201,6 @@ a:not(.btn):hover {
   transition: left 0.5s;
   padding-top: 90px;
 }
-.aside .empty {
-  height: 90px;
-  transition: height 0.4s;
-}
-.aside .hide {
-  height: 0;
-  transition: height 0.4s;
-}
 .aside__wrap {
   position: sticky;
   top: 0;
@@ -293,26 +285,36 @@ a:not(.btn):hover {
   background: #F8F8FD;
   transition: background 0.3s;
 }
-.aside .course__progress ul li p {
+.aside .course__progress ul li a {
   padding-left: 48px;
   display: flex;
   align-items: center;
+  color: black;
 }
-.aside .course__progress ul li p svg {
+.aside .course__progress ul li a svg {
   margin-right: 11px;
+}
+.aside .course__progress ul li a:hover {
+  color: black;
 }
 .aside .course__progress ul .course__block {
   margin-top: 33px;
   margin-bottom: 7px;
 }
-.aside .course__progress ul .completed p svg {
+.aside .course__progress ul .completed a svg {
   min-width: 8px;
 }
-.aside .course__progress ul .completed p svg circle {
+.aside .course__progress ul .completed a svg circle {
   fill: #8DE300;
 }
 .aside .course__progress ul .selected {
   background-color: black;
+  color: white;
+}
+.aside .course__progress ul .selected a {
+  color: white;
+}
+.aside .course__progress ul .selected a:hover {
   color: white;
 }
 .aside .course__progress ul .number {
@@ -745,6 +747,7 @@ a:not(.btn):hover {
   font-family: "Proxima Nova Sb", sans-serif;
   font-size: 1.875rem;
   line-height: 140%;
+  color: black;
   transition: color 0.3s, background-color 0.3s;
 }
 .next-lesson svg {
@@ -755,7 +758,7 @@ a:not(.btn):hover {
 }
 .next-lesson:hover {
   background-color: black;
-  color: white;
+  color: white !important;
 }
 .next-lesson:hover svg path {
   fill: white;

@@ -209,16 +209,6 @@ a {
   transition: left 0.5s;
   padding-top: 90px;
 
-  .empty {
-    height: 90px;
-    transition: height 0.4s;
-  }
-
-  .hide {
-    height: 0;
-    transition: height 0.4s;
-  }
-
   &__wrap {
     position: sticky;
     top: 0;
@@ -330,13 +320,18 @@ a {
             transition: background 0.3s;
           }
 
-          p {
+          a {
             padding-left: 48px;
             display: flex;
             align-items: center;
+            color: black;
 
             svg {
               margin-right: 11px;
+            }
+
+            &:hover {
+              color: black;
             }
           }
         }
@@ -347,7 +342,7 @@ a {
         }
 
         .completed {
-          p {
+          a {
             svg {
               min-width: 8px;
 
@@ -361,6 +356,14 @@ a {
         .selected {
           background-color: black;
           color: white;
+
+          a {
+            color: white;
+
+            &:hover {
+              color: white;
+            }
+          }
         }
 
         .number {

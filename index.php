@@ -3,7 +3,7 @@
  * Template Name: Главная страница *
  */
 
-//get_header();
+get_header();
 ?>
 <!-- main(start)-->
 
@@ -35,59 +35,60 @@
                     </div>
                     <div class="course__progress">
                         <ul class="lessons-list">
-                            <li class="completed">
-                                <p>
+                            <li class="<?php selectingPage($post->post_name, '') ?>">
+                                <a href="http://m9124487.bget.ru/">
                                     <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="4.71875" cy="4" r="4" fill="#D0D0E1"/>
                                     </svg>
+									
                                     Введение
-                                </p>
+                                </a>
                             </li>
-                            <li class="completed selected"><span class="number">1</span>
-                                <p>
+                            <li class="<?php selectingPage($post->post_name, '1-1') ?>"><span class="number">1</span>
+                                <a href="http://m9124487.bget.ru/1-1">
                                     <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="4.71875" cy="4" r="4" fill="#D0D0E1"/>
                                     </svg>
                                     Инструменты и навыки веб-дизайнера
-                                </p>
+                                </a>
                             </li>
-                            <li><span class="number">2</span>
-                                <p>
+                            <li class="<?php selectingPage($post->post_name, '1-2') ?>"><span class="number">2</span>
+                                <a href="http://m9124487.bget.ru/1-2">
                                     <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="4.71875" cy="4" r="4" fill="#D0D0E1"/>
                                     </svg>
                                     Статичный баннер в Figma
-                                </p>
+                                </a>
                             </li>
-                            <li><span class="number">3</span>
-                                <p>
+                            <li class="<?php selectingPage($post->post_name, '1-3') ?>"><span class="number">3</span>
+                                <a href="http://m9124487.bget.ru/1-3">
                                     <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="4.71875" cy="4" r="4" fill="#D0D0E1"/>
                                     </svg>
                                     Видео баннер в Photoshop? Легко!
-                                </p>
+                                </a>
                             </li>
-                            <li><span class="number">4</span>
-                                <p>
+                            <li class="<?php selectingPage($post->post_name, '1-4') ?>"><span class="number">4</span>
+                                <a href="http://m9124487.bget.ru/1-4">
                                     <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="4.71875" cy="4" r="4" fill="#D0D0E1"/>
                                     </svg>
                                     Основы моушн-дизайна
-                                </p>
+                                </a>
                             </li>
-                            <li><span class="number">5</span>
-                                <p>
+                            <li class="<?php selectingPage($post->post_name, '1-5') ?>"><span class="number">5</span>
+                                <a href="http://m9124487.bget.ru/1-5">
                                     <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="4.71875" cy="4" r="4" fill="#D0D0E1"/>
                                     </svg>
                                     Бонусный урок
-                                </p>
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -103,257 +104,257 @@
                     <div class="course__progress">
                         <ul class="lessons-list">
                             <li>
-                                <p>
+                                <a>
                                     <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="4.71875" cy="4" r="4" fill="#D0D0E1"/>
                                     </svg>
                                     Введение
-                                </p>
+                                </a>
                             </li>
                             <p class="course__block text-grey">Блок 1. Технический дизайн</p>
                             <li><span class="number">6</span>
-                                <p>
+                                <a>
                                     <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="4.71875" cy="4" r="4" fill="#D0D0E1"/>
                                     </svg>
                                     Основы тех. дизайна в Photoshop
-                                </p>
+                                </a>
                             </li>
                             <li><span class="number">7</span>
-                                <p>
+                                <a>
                                     <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="4.71875" cy="4" r="4" fill="#D0D0E1"/>
                                     </svg>
                                     Тех. дизайн сложных объектов
-                                </p>
+                                </a>
                             </li>
                             <li><span class="number">8</span>
-                                <p>
+                                <a>
                                     <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="4.71875" cy="4" r="4" fill="#D0D0E1"/>
                                     </svg>
                                     Изометрия
-                                </p>
+                                </a>
                             </li>
 
                             <p class="course__block text-grey">Блок 2. Баннеры</p>
 
                             <li><span class="number">9</span>
-                                <p>
+                                <a>
                                     <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="4.71875" cy="4" r="4" fill="#D0D0E1"/>
                                     </svg>
                                     Компоновки и построение блоков
-                                </p>
+                                </a>
                             </li>
                             <li><span class="number">10</span>
-                                <p>
+                                <a>
                                     <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="4.71875" cy="4" r="4" fill="#D0D0E1"/>
                                     </svg>
                                     Баннеры для продажи товаров
-                                </p>
+                                </a>
                             </li>
                             <li><span class="number">10</span>
-                                <p>
+                                <a>
                                     <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="4.71875" cy="4" r="4" fill="#D0D0E1"/>
                                     </svg>
                                     Баннеры для продажи услугу
-                                </p>
+                                </a>
                             </li>
 
                             <p class="course__block text-grey">Блок 3. Моушн-дизайн</p>
 
                             <li><span class="number">10</span>
-                                <p>
+                                <a>
                                     <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="4.71875" cy="4" r="4" fill="#D0D0E1"/>
                                     </svg>
                                     Анимация текста в Animate
-                                </p>
+                                </a>
                             </li>
                             <li><span class="number">10</span>
-                                <p>
+                                <a>
                                     <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="4.71875" cy="4" r="4" fill="#D0D0E1"/>
                                     </svg>
                                     Анимация объектов
-                                </p>
+                                </a>
                             </li>
                             <li><span class="number">10</span>
-                                <p>
+                                <a>
                                     <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="4.71875" cy="4" r="4" fill="#D0D0E1"/>
                                     </svg>
                                     Анимированный баннер
-                                </p>
+                                </a>
                             </li>
                             <li><span class="number">10</span>
-                                <p>
+                                <a>
                                     <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="4.71875" cy="4" r="4" fill="#D0D0E1"/>
                                     </svg>
                                     Параллакс эффект
-                                </p>
+                                </a>
                             </li>
                             <li><span class="number">10</span>
-                                <p>
+                                <a>
                                     <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="4.71875" cy="4" r="4" fill="#D0D0E1"/>
                                     </svg>
                                     Анимация персонажа
-                                </p>
+                                </a>
                             </li>
 
                             <p class="course__block text-grey">Блок 4. Векторная графика</p>
 
                             <li><span class="number">10</span>
-                                <p>
+                                <a>
                                     <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="4.71875" cy="4" r="4" fill="#D0D0E1"/>
                                     </svg>
                                     Рисуем иконки в Illustrator
-                                </p>
+                                </a>
                             </li>
                             <li><span class="number">10</span>
-                                <p>
+                                <a>
                                     <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="4.71875" cy="4" r="4" fill="#D0D0E1"/>
                                     </svg>
                                     Векторные изображения
-                                </p>
+                                </a>
                             </li>
                             <li><span class="number">10</span>
-                                <p>
+                                <a>
                                     <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="4.71875" cy="4" r="4" fill="#D0D0E1"/>
                                     </svg>
                                     Разработка логотипа
-                                </p>
+                                </a>
                             </li>
                             <li><span class="number">10</span>
-                                <p>
+                                <a>
                                     <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="4.71875" cy="4" r="4" fill="#D0D0E1"/>
                                     </svg>
                                     Айдентика
-                                </p>
+                                </a>
                             </li>
 
                             <p class="course__block text-grey">Блок 5. UX</p>
 
                             <li><span class="number">10</span>
-                                <p>
+                                <a>
                                     <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="4.71875" cy="4" r="4" fill="#D0D0E1"/>
                                     </svg>
                                     Анализ целевой аудитории
-                                </p>
+                                </a>
                             </li>
                             <li><span class="number">10</span>
-                                <p>
+                                <a>
                                     <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="4.71875" cy="4" r="4" fill="#D0D0E1"/>
                                     </svg>
                                     Прототипирование веб-проектов
-                                </p>
+                                </a>
                             </li>
 
                             <p class="course__block text-grey">Блок 6. UI</p>
 
                             <li><span class="number">10</span>
-                                <p>
+                                <a>
                                     <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="4.71875" cy="4" r="4" fill="#D0D0E1"/>
                                     </svg>
                                     Виды сайтов
-                                </p>
+                                </a>
                             </li>
                             <li><span class="number">10</span>
-                                <p>
+                                <a>
                                     <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="4.71875" cy="4" r="4" fill="#D0D0E1"/>
                                     </svg>
                                     Favicon
-                                </p>
+                                </a>
                             </li>
                             <li><span class="number">10</span>
-                                <p>
+                                <a>
                                     <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="4.71875" cy="4" r="4" fill="#D0D0E1"/>
                                     </svg>
                                     Главный экран
-                                </p>
+                                </a>
                             </li>
                             <li><span class="number">10</span>
-                                <p>
+                                <a>
                                     <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="4.71875" cy="4" r="4" fill="#D0D0E1"/>
                                     </svg>
                                     Основные блоки сайта
-                                </p>
+                                </a>
                             </li>
                             <li><span class="number">10</span>
-                                <p>
+                                <a>
                                     <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="4.71875" cy="4" r="4" fill="#D0D0E1"/>
                                     </svg>
                                     Собираем лендинг в Figma
-                                </p>
+                                </a>
                             </li>
                             <li><span class="number">10</span>
-                                <p>
+                                <a>
                                     <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="4.71875" cy="4" r="4" fill="#D0D0E1"/>
                                     </svg>
                                     Адаптивный дизайн
-                                </p>
+                                </a>
                             </li>
 
                             <p class="course__block text-grey">Блок 7. Портфолио и кейс</p>
 
                             <li><span class="number">10</span>
-                                <p>
+                                <a>
                                     <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="4.71875" cy="4" r="4" fill="#D0D0E1"/>
                                     </svg>
                                     Формируем пул работ в портфолио
-                                </p>
+                                </a>
                             </li>
                             <li><span class="number">10</span>
-                                <p>
+                                <a>
                                     <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="4.71875" cy="4" r="4" fill="#D0D0E1"/>
                                     </svg>
                                     Собираем кейс
-                                </p>
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -387,7 +388,7 @@
         <div class="content__wrapper">
 
             <p class="breadcrumbs text-grey">Веб-дизайн, быстрый старт / Урок 1</p>
-            <h1>Инструменты и навыки веб-дизайнера</h1>
+            <h1><?php the_field('title_name') ?></h1>
 
             <?php include 'assets/componets/free_lesson1.php' ?>
 
@@ -421,10 +422,10 @@
 
 <!-- main(end) -->
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://player.vimeo.com/api/player.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
-<script src="assets/js/script.js"></script>
+<script src="<?=get_template_directory_uri()?>/assets/js/jquery.min.js"></script>
+<script src="<?=get_template_directory_uri()?>/assets/js/player.js"></script>
+<script src="<?=get_template_directory_uri()?>/assets/js/simplebar.min.js"></script>
+<script src="<?=get_template_directory_uri()?>/assets/js/script.js"></script>
 
 </body>
 </html>

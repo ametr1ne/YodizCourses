@@ -17,11 +17,11 @@
         <div class="progress__box">
             <div class="text">
                 <h3 class="text__name">Дима Зубков</h3>
-                <h3 class="text__percent">3%</h3>
+                <h3 class="text__percent"><?php the_field('account_percent') ?>%</h3>
             </div>
             <div class="progress__bar">
                 <div class="bar__grey"></div>
-                <div class="bar__green"></div>
+                <div style="width: <?php the_field('account_percent') ?>%" class="bar__green"></div>
             </div>
         </div>
         <div class="progress__categories">
@@ -30,41 +30,41 @@
                 <div class="tools__item">
                     <div class="tools__title">
                         <small class="tools__name text-grey">Figma</small>
-                        <small class="tools__percent text-grey">6%</small>
+                        <small class="tools__percent text-grey"><?php the_field('skills_percent_figma')?>%</small>
                     </div>
                     <div class="tools__bar">
                         <div class="bar__grey"></div>
-                        <div style="width: 6%" class="bar__green"></div>
+                        <div style="width: <?php the_field('skills_percent_figma')?>%" class="bar__green"></div>
                     </div>
                 </div>
                 <div class="tools__item">
                     <div class="tools__title">
                         <small class="tools__name text-grey">Photoshop</small>
-                        <small class="tools__percent text-grey">6%</small>
+                        <small class="tools__percent text-grey"><?php the_field('skills_percent_photoshop')?>%</small>
                     </div>
                     <div class="tools__bar">
                         <div class="bar__grey"></div>
-                        <div style="width: 6%" class="bar__green"></div>
+                        <div style="width: <?php the_field('skills_percent_photoshop')?>%" class="bar__green"></div>
                     </div>
                 </div>
                 <div class="tools__item">
                     <div class="tools__title">
                         <small class="tools__name text-grey">Illustrator</small>
-                        <small class="tools__percent text-grey">11%</small>
+                        <small class="tools__percent text-grey"><?php the_field('skills_percent_illustrator')?>%</small>
                     </div>
                     <div class="tools__bar">
                         <div class="bar__grey"></div>
-                        <div style="width: 11%" class="bar__green"></div>
+                        <div style="width: <?php the_field('skills_percent_illustrator')?>%" class="bar__green"></div>
                     </div>
                 </div>
                 <div class="tools__item">
                     <div class="tools__title">
                         <small class="tools__name text-grey">Animate</small>
-                        <small class="tools__percent text-grey">11%</small>
+                        <small class="tools__percent text-grey"><?php the_field('skills_percent_animate')?>%</small>
                     </div>
                     <div class="tools__bar">
                         <div class="bar__grey"></div>
-                        <div style="width: 11%" class="bar__green"></div>
+                        <div style="width: <?php the_field('skills_percent_animate')?>%" class="bar__green"></div>
                     </div>
                 </div>
             </div>
@@ -73,41 +73,41 @@
                 <div class="tools__item">
                     <div class="tools__title">
                         <small class="tools__name text-grey">Уровень нормы</small>
-                        <small class="tools__percent text-grey">3%</small>
+                        <small class="tools__percent text-grey"><?php the_field('skills_percent_norm_level')?>%</small>
                     </div>
                     <div class="tools__bar">
                         <div class="bar__grey"></div>
-                        <div style="width: 3%" class="bar__green"></div>
+                        <div style="width: <?php the_field('skills_percent_norm_level')?>%" class="bar__green"></div>
                     </div>
                 </div>
                 <div class="tools__item">
                     <div class="tools__title">
                         <small class="tools__name text-grey">Технический дизайн</small>
-                        <small class="tools__percent text-grey">6%</small>
+                        <small class="tools__percent text-grey"><?php the_field('skills_percent_technic_design')?>%</small>
                     </div>
                     <div class="tools__bar">
                         <div class="bar__grey"></div>
-                        <div style="width: 6%" class="bar__green"></div>
+                        <div style="width: <?php the_field('skills_percent_technic_design')?>%" class="bar__green"></div>
                     </div>
                 </div>
                 <div class="tools__item">
                     <div class="tools__title">
                         <small class="tools__name text-grey">UX/UI</small>
-                        <small class="tools__percent text-grey">8%</small>
+                        <small class="tools__percent text-grey"><?php the_field('skills_percent_ux_ui')?>%</small>
                     </div>
                     <div class="tools__bar">
                         <div class="bar__grey"></div>
-                        <div style="width: 8%" class="bar__green"></div>
+                        <div style="width: <?php the_field('skills_percent_ux_ui')?>%" class="bar__green"></div>
                     </div>
                 </div>
                 <div class="tools__item">
                     <div class="tools__title">
                         <small class="tools__name text-grey">Моушн-дизайн</small>
-                        <small class="tools__percent text-grey">10%</small>
+                        <small class="tools__percent text-grey"><?php the_field('skills_percent_motion_design')?>%</small>
                     </div>
                     <div class="tools__bar">
                         <div class="bar__grey"></div>
-                        <div style="width: 10%" class="bar__green"></div>
+                        <div style="width: <?php the_field('skills_percent_motion_design')?>%" class="bar__green"></div>
                     </div>
                 </div>
             </div>
@@ -122,75 +122,11 @@
 <div class="theory content-item video-block">
     <h2>Теория</h2>
     <div class="video">
-        <iframe id="theory_video" src="https://player.vimeo.com/video/570300824?h=8d50b301b3" width="100%" height="100%" frameborder="0"
-                allow="autoplay; fullscreen"></iframe>
+        <iframe title=0 sidedock=0 controls=0 id="theory_video" src="https://player.vimeo.com/video/570300824?h=8d50b301b3" width="100%" height="100%" frameborder="0"
+                allow="autoplay; fullscreen" picture-in-picture></iframe>
     </div>
     <ul>
-        <li>
-            <a class="timecode timecode-theory">
-                <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
-                     xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="4.71875" cy="4" r="4" fill="#D0D0E1"/>
-                </svg>
-                Какие инструменты изучать, какие навыки развивать?
-            </a>
-        </li>
-        <li>
-            <a class="timecode timecode-theory">
-                <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
-                     xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="4.71875" cy="4" r="4" fill="#D0D0E1"/>
-                </svg>
-                Figma — бесплатно, быстро, просто
-            </a></li>
-        <li>
-            <a class="timecode timecode-theory">
-                <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
-                     xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="4.71875" cy="4" r="4" fill="#D0D0E1"/>
-                </svg>
-                Векторная и растровая графика
-            </a></li>
-        <li>
-            <a class="timecode timecode-theory">
-                <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
-                     xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="4.71875" cy="4" r="4" fill="#D0D0E1"/>
-                </svg>
-                Что делает веб-дизайнер?
-            </a></li>
-        <li>
-            <a class="timecode timecode-theory">
-                <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
-                     xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="4.71875" cy="4" r="4" fill="#D0D0E1"/>
-                </svg>
-                Photoshop для веб-дизайнера
-            </a></li>
-        <li>
-            <a class="timecode timecode-theory">
-                <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
-                     xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="4.71875" cy="4" r="4" fill="#D0D0E1"/>
-                </svg>
-                Зачем Illustrator веб-дизайнеру?
-            </a></li>
-        <li>
-            <a class="timecode timecode-theory">
-                <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
-                     xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="4.71875" cy="4" r="4" fill="#D0D0E1"/>
-                </svg>
-                Самые полезные горячие клавиши для работы
-            </a></li>
-        <li>
-            <a class="timecode timecode-theory">
-                <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
-                     xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="4.71875" cy="4" r="4" fill="#D0D0E1"/>
-                </svg>
-                Как собрать портфолио, не имея коммерческих заказов?
-            </a></li>
+        <? fillArray() ?>
     </ul>
 </div>
 
@@ -242,9 +178,9 @@
 <div class="checking-hw content-item">
     <h2>Отправить домашнее задание на проверку</h2>
     <div class="checking-hw__avatars">
-        <div class="avatars-item"><img src="assets/img/1.png" alt="dima"></div>
-        <div class="avatars-item"><img src="assets/img/2.png" alt="lika"></div>
-        <div class="avatars-item"><img src="assets/img/3.png" alt="lesha"></div>
+        <div class="avatars-item"><img src="<?=get_template_directory_uri()?>/assets/img/1.png" alt="dima"></div>
+        <div class="avatars-item"><img src="<?=get_template_directory_uri()?>/assets/img/2.png" alt="lika"></div>
+        <div class="avatars-item"><img src="<?=get_template_directory_uri()?>/assets/img/3.png" alt="lesha"></div>
     </div>
     <div class="checking-hw__criterion">
         <p class="text-grey">Проверка домашних заданий будет доступна при покупке основного курса «Профессия
@@ -270,10 +206,10 @@
 
 <!-- checking-hw(end)-->
 
-<div class="next-lesson content-item">
+<a href='http://m9124487.bget.ru/<?php the_field('next-lesson-link')?>' class="next-lesson content-item">
     Перейти к следующему уроку
     <svg width="41" height="15" viewBox="0 0 41 15" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M40.7071 8.16634C41.0976 7.77581 41.0976 7.14265 40.7071 6.75213L34.3431 0.388164C33.9526 -0.00236071 33.3195 -0.00236077 32.9289 0.388164C32.5384 0.778688 32.5384 1.41185 32.9289 1.80238L38.5858 7.45923L32.9289 13.1161C32.5384 13.5066 32.5384 14.1398 32.9289 14.5303C33.3195 14.9208 33.9526 14.9208 34.3431 14.5303L40.7071 8.16634ZM-8.74228e-08 8.45923L40 8.45923L40 6.45923L8.74228e-08 6.45923L-8.74228e-08 8.45923Z"
               fill="black"/>
     </svg>
-</div>
+</a>

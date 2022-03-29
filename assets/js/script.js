@@ -123,32 +123,16 @@ const iframeHomework = $('#homework_video');
 let player = new Vimeo.Player(iframeTheory);
 let player2 = new Vimeo.Player(iframeHomework);
 
-const theoryTimecodes = [
-    {id: '1', name: 'Какие инструменты изучать, какие навыки развивать?', time: 30},
-    {id: '2', name: 'Figma — бесплатно, быстро, просто', time: 341},
-    {id: '3', name: 'Векторная и растровая графика', time: 123},
-    {id: '4', name: 'Что делает веб-дизайнер?', time: 233},
-    {id: '5', name: 'Photoshop для веб-дизайнера', time: 324},
-    {id: '6', name: 'Зачем Illustrator веб-дизайнеру?', time: 233},
-    {id: '7', name: 'Самые полезные горячие клавиши для работы', time: 345},
-    {id: '8', name: 'Как собрать портфолио, не имея коммерческих заказов?', time: 324},
-]
-
-const homeworkTimecodes = [
-    {id: '1', time: 30},
-    {id: '2', time: 341},
-]
-
 $('.timecode-theory').each(function (index) {
     $(this).on('click', function () {
-        player.setCurrentTime(theoryTimecodes[index].time)
+        player.setCurrentTime($(this).attr('data-timecode'))
         player.play();
     })
 })
 
 $('.timecode-homework').each(function (index) {
     $(this).on('click', function () {
-        player2.setCurrentTime(homeworkTimecodes[index].time)
+        player2.setCurrentTime($(this).attr('data-timecode'))
         player2.play();
     })
 })
