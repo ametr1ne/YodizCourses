@@ -35,8 +35,8 @@ get_header();
                     </div>
                     <div class="course__progress">
                         <ul class="lessons-list">
-                            <li class="selected">
-                                <a href="http://m9124487.bget.ru/">
+                            <li class="<?php selectingPage($post->post_name, 'intro1') ?>" data-href="http://m9124487.bget.ru/">
+                                <a>
                                     <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="4.71875" cy="4" r="4" fill="#D0D0E1"/>
@@ -44,8 +44,8 @@ get_header();
                                     Введение
                                 </a>
                             </li>
-                            <li><span class="number">1</span>
-                                <a href="http://m9124487.bget.ru/1-1">
+                            <li class="<?php selectingPage($post->post_name, '1-1') ?>" data-href="http://m9124487.bget.ru/1-1"><span class="number">1</span>
+                                <a>
                                     <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="4.71875" cy="4" r="4" fill="#D0D0E1"/>
@@ -53,8 +53,8 @@ get_header();
                                     Инструменты и навыки веб-дизайнера
                                 </a>
                             </li>
-                            <li><span class="number">2</span>
-                                <a href="http://m9124487.bget.ru/1-2">
+                            <li class="<?php selectingPage($post->post_name, '1-2') ?>" data-href="http://m9124487.bget.ru/1-2"><span class="number">2</span>
+                                <a>
                                     <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="4.71875" cy="4" r="4" fill="#D0D0E1"/>
@@ -62,8 +62,8 @@ get_header();
                                     Статичный баннер в Figma
                                 </a>
                             </li>
-                            <li><span class="number">3</span>
-                                <a href="http://m9124487.bget.ru/1-3">
+                            <li class="<?php selectingPage($post->post_name, '1-3') ?>" data-href="http://m9124487.bget.ru/1-3"><span class="number">3</span>
+                                <a>
                                     <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="4.71875" cy="4" r="4" fill="#D0D0E1"/>
@@ -71,8 +71,8 @@ get_header();
                                     Видео баннер в Photoshop? Легко!
                                 </a>
                             </li>
-                            <li><span class="number">4</span>
-                                <a href="http://m9124487.bget.ru/1-4">
+                            <li class="<?php selectingPage($post->post_name, '1-4') ?>" data-href="http://m9124487.bget.ru/1-4"><span class="number">4</span>
+                                <a>
                                     <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="4.71875" cy="4" r="4" fill="#D0D0E1"/>
@@ -80,8 +80,8 @@ get_header();
                                     Основы моушн-дизайна
                                 </a>
                             </li>
-                            <li><span class="number">5</span>
-                                <a href="http://m9124487.bget.ru/1-5">
+                            <li class="<?php selectingPage($post->post_name, '1-5') ?>" data-href="http://m9124487.bget.ru/1-5"><span class="number">5</span>
+                                <a>
                                     <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="4.71875" cy="4" r="4" fill="#D0D0E1"/>
@@ -422,7 +422,6 @@ get_header();
 <!-- main(end) -->
 
 <script src="<?=get_template_directory_uri()?>/assets/js/jquery.min.js"></script>
-<script src="<?=get_template_directory_uri()?>/assets/js/player.js"></script>
 <script src="<?=get_template_directory_uri()?>/assets/js/simplebar.min.js"></script>
 <script src="<?=get_template_directory_uri()?>/assets/js/script.js"></script>
 

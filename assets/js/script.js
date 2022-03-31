@@ -1,5 +1,9 @@
 $('.lessons-list li').each(function (i) {
     $(this).on('click', function () {
+        let href = $(this).attr('data-href');
+
+        $(location).attr('href',href);
+
         $('.lessons-list li').each(function (ind) {
             if (ind === i) {
                 $(this).addClass('selected')
@@ -42,18 +46,6 @@ $('.theory .timecode').each(function (index) {
     })
 })
 
-// function removingEmptyBlock() {
-//     let scroll = $(document).scrollTop()
-//
-//     if (scroll >= 90) {
-//         $('.empty').addClass('hide')
-//         $('.aside__wrap').addClass('changeHeight')
-//     } else {
-//         $('.empty').removeClass('hide')
-//         $('.aside__wrap').removeClass('changeHeight')
-//     }
-// }
-
 $('.homework .timecode').each(function (index) {
     $(this).on('click', function () {
 
@@ -73,10 +65,10 @@ $('.homework .timecode').each(function (index) {
     })
 })
 
-// removingEmptyBlock()
-
-// $('.aside__wrap').on('scroll', function () {
-//     $('.aside__wrap').addClass('changeHeight');
+// $('.timecode').each(function () {
+//     $(this).on('click', function () {
+//
+//     })
 // })
 
 function videoResize() {
@@ -124,26 +116,36 @@ tag.src = "https://www.youtube.com/iframe_api";
 let firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-let player;
+let videoData = [];
+
+$('.video').each(function () {
+    videoData.push(new Array($(this).attr('data-videohref'), $(this).find('.video_player').attr('id')));
+})
+
+console.log(videoData)
+
+let curplayer = []
+
 function onYouTubeIframeAPIReady() {
-    player = new YT.Player('theory_player', {
+
+    for(let i = 0; i < videoData.length;i++) {
+        curplayer[i] = createPlayer(videoData[i]);
+    }
+}
+function createPlayer(playerInfo) {
+    return new YT.Player(playerInfo[1], {
         height: '100%',
         width: '100%',
-        videoId: '_AY7MxCw_Dg',
-        events: {
-            // 'onReady': onPlayerReady,
-            // 'onStateChange': onPlayerStateChange
-        }
+        videoId: playerInfo[0],
+        playerVars: {'controls': 1, 'modestbranding': 1, 'showinfo': 0, 'rel': 0, 'iv_load_policy': 3 }
     });
 }
 
 $('.timecode-theory').each(function () {
     $(this).on('click', function () {
-        player.seekTo(this.dataset.timecode);
+        curplayer[this.dataset.index].seekTo(this.dataset.timecode);
     })
 })
-
-
 
 /*----- Изменение высоты видео-контейнера -------------*/
 
