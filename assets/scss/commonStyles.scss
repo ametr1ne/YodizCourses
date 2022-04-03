@@ -47,23 +47,7 @@ header {
 .header {
 
   &__logo {
-    cursor: pointer;
     transition: margin-left 0.4s;
-
-    svg {
-      path {
-        transition: fill 0.2s linear;
-      }
-    }
-
-    &:hover {
-      svg {
-        path {
-          fill: #f00;
-          transition: fill 0.2s linear;
-        }
-      }
-    }
   }
 
   &__wrapper {
@@ -180,13 +164,15 @@ a {
   font-size: 19px;
   line-height: 130%;
   letter-spacing: -0.02em;
-  color: #0500FF;
+  //color: #0500FF;
+  color: black;
   font-weight: normal;
   transition: color 0.3s;
   text-decoration: none;
 
   &:not(.btn):hover {
-    color: #ff0000;
+    //color: #ff0000;
+    color: #0500FF;
     transition: color 0.3s;
   }
 
@@ -196,7 +182,7 @@ a {
 }
 
 .text-grey {
-  color: #A5A5BB;
+  color: #9090A9;
 }
 
 .aside {
@@ -290,6 +276,15 @@ a {
 
         p {
           font-size: 19px;
+        }
+
+        a {
+          color: #0500FF;
+          transition: 0.3s;
+
+          &:hover {
+            color: #ff0000;
+          }
         }
 
         .price {
@@ -426,6 +421,179 @@ a {
   .bottom {
     margin-top: 24px;
   }
+}
+
+.popup {
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
+  z-index: 200;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s;
+  width: 960px;
+  background: #FFFFFF;
+  border-radius: 10px;
+  padding: 40px 34px;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__content {
+    .lock {
+      margin-bottom: 17px;
+    }
+  }
+
+  &__content {
+    h2 {
+      margin-bottom: 22px;
+      text-align: center;
+    }
+  }
+
+  &__content {
+    p {
+      font-weight: 400;
+      line-height: 130%;
+      text-align: center;
+      letter-spacing: -0.02em;
+    }
+  }
+
+  &__content .free {
+    font-size: 30px;
+  }
+
+  &__content .paid {
+    font-size: 19px;
+  }
+
+  &__content .popup__btn {
+    margin-top: 34px;
+    background: #0500FF;
+    border-radius: 100px;
+    padding: 0 177px;
+    height: 70px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.4s;
+
+    &:hover {
+      background: #ff0000;
+    }
+  }
+
+  .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 1024px) {
+  .popup {
+    width: 740px;
+
+    &__content {
+      .popup__btn {
+        padding: 0 15px;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .popup {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: translate(0, 0);
+    display: flex;
+    align-items: center;
+    margin: auto;
+    height: min-content;
+    width: 95%;
+    padding: 20px 18px;
+    overflow: auto;
+    -webkit-overflow-scrolling: auto;
+
+    &__content {
+      .free {
+        font-size: 19px;
+      }
+      .paid {
+        font-size: 16px;
+      }
+
+      .popup__btn {
+        height: 60px;
+      }
+    }
+  }
+
+  .free-popup {
+    padding-top: 50px;
+  }
+
+  .paid-popup {
+    display: block;
+  }
+}
+
+.dark-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 150;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.showFreePopup {
+  overflow: hidden;
+}
+
+.showFreePopup {
+  .free-popup {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.showFreePopup {
+  .dark-popup {
+    display: block;
+  }
+}
+
+.showPaidPopup {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.showPaidPopup .paid-popup {
+  visibility: visible;
+  opacity: 1;
+}
+
+.showPaidPopup .dark-popup {
+  display: block;
 }
 
 /*----- elements ----------*/
@@ -658,6 +826,7 @@ a {
             margin-right: 18px;
             font-size: 14px;
           }
+
           p {
             font-size: 14px;
           }

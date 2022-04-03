@@ -7,14 +7,14 @@ get_header();
 ?>
 <!-- main(start)-->
 
-<?php include 'header.php'?>
+<?php include 'header.php' ?>
 
 <main class="main">
 
     <!-- aside(start) -->
 
     <aside class="aside">
-<!--        <div class="empty"></div>-->
+        <!--        <div class="empty"></div>-->
         <div class="aside__wrap" data-simplebar>
             <div class="aside__close-btn">
                 <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -30,23 +30,22 @@ get_header();
                         <h2>Веб-дизайн, быстрый старт</h2>
                         <div>
                             <p class="price text-grey">Бесплатно</p>
-                            <p class="students text-grey">473 — ученика проходит курс</p>
+                            <p class="students text-grey"><?= freeRandom() ?> — ученика проходит курс</p>
                         </div>
                     </div>
                     <div class="course__progress">
-                        <ul class="lessons-list">
-                            <li class="<?php selectingPage($post->post_name, '') ?>">
-                                <a href="http://m9124487.bget.ru/">
+                        <ul class="lessons-list free-lessons">
+                            <li class="<?php selectingPage($post->post_name, 'intro1') ?> free-item">
+                                <a>
                                     <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="4.71875" cy="4" r="4" fill="#D0D0E1"/>
                                     </svg>
-									
                                     Введение
                                 </a>
                             </li>
-                            <li class="<?php selectingPage($post->post_name, '1-1') ?>"><span class="number">1</span>
-                                <a href="http://m9124487.bget.ru/1-1">
+                            <li class="<?php selectingPage($post->post_name, '1-1') ?> free-item"><span class="number">1</span>
+                                <a>
                                     <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="4.71875" cy="4" r="4" fill="#D0D0E1"/>
@@ -54,8 +53,8 @@ get_header();
                                     Инструменты и навыки веб-дизайнера
                                 </a>
                             </li>
-                            <li class="<?php selectingPage($post->post_name, '1-2') ?>"><span class="number">2</span>
-                                <a href="http://m9124487.bget.ru/1-2">
+                            <li class="<?php selectingPage($post->post_name, '1-2') ?> free-item"><span class="number">2</span>
+                                <a>
                                     <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="4.71875" cy="4" r="4" fill="#D0D0E1"/>
@@ -63,8 +62,8 @@ get_header();
                                     Статичный баннер в Figma
                                 </a>
                             </li>
-                            <li class="<?php selectingPage($post->post_name, '1-3') ?>"><span class="number">3</span>
-                                <a href="http://m9124487.bget.ru/1-3">
+                            <li class="<?php selectingPage($post->post_name, '1-3') ?> free-item"><span class="number">3</span>
+                                <a>
                                     <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="4.71875" cy="4" r="4" fill="#D0D0E1"/>
@@ -72,8 +71,8 @@ get_header();
                                     Видео баннер в Photoshop? Легко!
                                 </a>
                             </li>
-                            <li class="<?php selectingPage($post->post_name, '1-4') ?>"><span class="number">4</span>
-                                <a href="http://m9124487.bget.ru/1-4">
+                            <li class="<?php selectingPage($post->post_name, '1-4') ?> free-item"><span class="number">4</span>
+                                <a>
                                     <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="4.71875" cy="4" r="4" fill="#D0D0E1"/>
@@ -81,8 +80,8 @@ get_header();
                                     Основы моушн-дизайна
                                 </a>
                             </li>
-                            <li class="<?php selectingPage($post->post_name, '1-5') ?>"><span class="number">5</span>
-                                <a href="http://m9124487.bget.ru/1-5">
+                            <li class="<?php selectingPage($post->post_name, '1-5') ?> free-item"><span class="number">5</span>
+                                <a>
                                     <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="4.71875" cy="4" r="4" fill="#D0D0E1"/>
@@ -97,12 +96,12 @@ get_header();
                     <div class="course__header">
                         <h2>Профессия веб-дизайнер</h2>
                         <div>
-                            <a class="price">Купить курс</a>
-                            <p class="students text-grey">54 — ученика проходит курс</p>
+                            <a href="https://yodizschool.ru/online" class="price">Купить курс</a>
+                            <p class="students text-grey"><?= paidRandom() ?> — ученика проходит курс</p>
                         </div>
                     </div>
                     <div class="course__progress">
-                        <ul class="lessons-list">
+                        <ul class="lessons-list paid-lessons">
                             <li>
                                 <a>
                                     <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
@@ -420,12 +419,54 @@ get_header();
     <!-- content(end) -->
 </main>
 
+<div class="popup free-popup">
+    <svg class="close" width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1 1.50019L7.99988 8.50007L14.9999 1.5" stroke="#9090A9" stroke-width="2" stroke-linecap="round"/>
+        <path d="M15 15.5L8.00012 8.50011L1.00005 15.5002" stroke="#9090A9" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+    <div class="popup__content">
+        <p class="free">Следи за расписанием следующих занятий курса
+            «Веб-дизайн, быстрый старт» в телеграм боте Yodiz School</p>
+        <a href="https://t.me/Yodiz_School_Bot" class="btn popup__btn" target="_blank">Открыть бота</a>
+    </div>
+</div>
+
+<div class="popup paid-popup">
+    <svg class="close" width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1 1.50019L7.99988 8.50007L14.9999 1.5" stroke="#9090A9" stroke-width="2" stroke-linecap="round"/>
+        <path d="M15 15.5L8.00012 8.50011L1.00005 15.5002" stroke="#9090A9" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+    <div class="popup__content">
+        <svg class="lock" width="28" height="35" viewBox="0 0 28 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_677_749)">
+                <path d="M15.6887 21H12.3105V28H15.6887V21Z" fill="black"/>
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M27.5 17.5C27.5 17.4481 27.5 17.3963 27.5 17.3444V14H24.1219H22.4328V8.76296C22.4328 3.91481 18.6573 0 13.9876 0C9.31785 0 5.54232 3.91481 5.54232 8.76296V10.5259H8.94526V8.76296C8.94526 5.85926 11.2056 3.5 14.0124 3.5C16.8192 3.5 19.0796 5.85926 19.0796 8.76296V14H16.8937H11.8017H11.0814H8.94526H5.56716H4.5736H3.87811H0.5V17.3444C0.5 17.3963 0.5 17.4481 0.5 17.5V31.5C0.5 31.5519 0.5 31.6037 0.5 31.6556V34.9741H3.48068C3.60488 35 3.72907 35 3.87811 35H24.1219C24.2461 35 24.3951 35 24.5193 34.9741H27.5V31.6556C27.5 31.6037 27.5 31.5519 27.5 31.5V17.5V17.5ZM3.87811 31.5V17.5H24.1219V31.5H16.8937H11.1063H3.87811Z"
+                      fill="black"/>
+            </g>
+            <defs>
+                <clipPath id="clip0_677_749">
+                    <rect x="0.5" width="27" height="35" fill="white"/>
+                </clipPath>
+            </defs>
+        </svg>
+        <h2>Регистрация на курс «Профессия веб-дизайнер»</h2>
+        <p class="text-grey paid">Под руководством практикующих, опытных наставников ты пройдешь путь становления в профессии веб-дизайнер. С
+            еженедельной обратной связью освоишь до «уровня про» программы: Figma, Photoshop и Illustrator. Освоишь
+            моушн-дизайн в программе Adobe Animate. На основе реальных клиентов разработаешь более 12 коммерчески
+            обоснованных проектов в портфолио. И, самое важное, подготовишь серьёзную базу для дальнейшего поиска
+            стажировки, работы или заказов на фриланс.</p>
+        <a href="" class="btn popup__btn">Зарегистрироваться на курс</a>
+    </div>
+</div>
+
+<div class="dark-popup"></div>
+
 <!-- main(end) -->
 
-<script src="<?=get_template_directory_uri()?>/assets/js/jquery.min.js"></script>
-<script src="<?=get_template_directory_uri()?>/assets/js/player.js"></script>
-<script src="<?=get_template_directory_uri()?>/assets/js/simplebar.min.js"></script>
-<script src="<?=get_template_directory_uri()?>/assets/js/script.js"></script>
+<script src="<?= get_template_directory_uri() ?>/assets/js/jquery.min.js"></script>
+<script src="<?= get_template_directory_uri() ?>/assets/js/simplebar.min.js"></script>
+<script src="<?= get_template_directory_uri() ?>/assets/js/script.js"></script>
 
 </body>
 </html>

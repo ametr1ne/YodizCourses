@@ -1,91 +1,4 @@
-$('.lessons-list li').each(function (i) {
-    $(this).on('click', function () {
-        $('.lessons-list li').each(function (ind) {
-            if (ind === i) {
-                $(this).addClass('selected')
-            } else $(this).removeClass('selected')
-        })
-    })
-})
-
-$('.number').each(function (i) {
-    $(this).text(i + 1)
-})
-
-$(document).on('ready', function () {
-    let toolsHeight = $('.tools').outerHeight(true)
-    console.log(toolsHeight)
-    $('.progress__categories').css('max-height', toolsHeight + 'px')
-})
-
-
-$('.btn-arrow').on('click', function () {
-    $('.progress').toggleClass('open-body')
-})
-
-$('.theory .timecode').each(function (index) {
-    $(this).on('click', function () {
-
-        $('.theory .timecode').each(function (ind) {
-            if (ind === index)
-                $(this).addClass('pressed')
-            else $(this).removeClass('pressed')
-        })
-
-        $('.theory .timecode svg circle').each(function (i) {
-            if (i <= index) {
-                $(this).css('fill', '#8DE300');
-            } else {
-                $(this).css('fill', '#D0D0E1');
-            }
-        })
-    })
-})
-
-// function removingEmptyBlock() {
-//     let scroll = $(document).scrollTop()
-//
-//     if (scroll >= 90) {
-//         $('.empty').addClass('hide')
-//         $('.aside__wrap').addClass('changeHeight')
-//     } else {
-//         $('.empty').removeClass('hide')
-//         $('.aside__wrap').removeClass('changeHeight')
-//     }
-// }
-
-$('.homework .timecode').each(function (index) {
-    $(this).on('click', function () {
-
-        $('.homework .timecode').each(function (ind) {
-            if (ind === index)
-                $(this).addClass('pressed')
-            else $(this).removeClass('pressed')
-        })
-
-        $('.homework .timecode svg circle').each(function (i) {
-            if (i <= index) {
-                $(this).css('fill', '#8DE300');
-            } else {
-                $(this).css('fill', '#D0D0E1');
-            }
-        })
-    })
-})
-
-// removingEmptyBlock()
-
-// $('.aside__wrap').on('scroll', function () {
-//     $('.aside__wrap').addClass('changeHeight');
-// })
-
-function videoResize() {
-    let videoWidth = $('.video').outerWidth()
-    let videoHeight = videoWidth * 0.628
-    $('.video').css('height', videoHeight + 'px')
-}
-
-$('.header__burger').on('click', function () {
+function closingAside() {
     $('body').toggleClass('open-aside')
     $('body').removeClass('close-aside')
     if ($('.header__burger').hasClass('closed')) {
@@ -103,6 +16,100 @@ $('.header__burger').on('click', function () {
             $('.header__line--3').addClass('header__line--3-fly');
         }
     }
+}
+
+$('.free-lessons li').each(function () {
+    $(this).on('click', function () {
+        if (!$(this).hasClass('selected')) {
+            if ($('body').hasClass('open-aside')) {
+                closingAside()
+            }
+            $('body').addClass('showFreePopup');
+        }
+    })
+})
+
+$('.paid-lessons li').each(function () {
+    $(this).on('click', function () {
+        if (!$(this).hasClass('selected')) {
+            if ($('body').hasClass('open-aside')) {
+                closingAside()
+            }
+            $('body').addClass('showPaidPopup');
+        }
+    })
+})
+
+$('.lessons-list li').each(function () {
+    if ($(this).hasClass('selected')) {
+        $(this).addClass('completed');
+    } else $(this).removeClass('completed')
+})
+
+
+$('.next-lesson').on('click', function () {
+    $('body').addClass('showFreePopup');
+})
+
+$('.close').on('click', function () {
+    $('body').removeClass('showFreePopup');
+    $('body').removeClass('showPaidPopup');
+})
+
+$('.dark-popup').on('click', function () {
+    $('body').removeClass('showFreePopup');
+    $('body').removeClass('showPaidPopup');
+})
+
+
+$('.number').each(function (i) {
+    $(this).text(i + 1)
+})
+
+$(document).on('ready', function () {
+    let toolsHeight = $('.tools').outerHeight(true)
+    $('.progress__categories').css('max-height', toolsHeight + 'px')
+})
+
+$('.btn-arrow').on('click', function () {
+    $('.progress').toggleClass('open-body')
+})
+
+/*---------------- timecodes --------------*/
+
+$('.timecode').on('click', function () {
+
+    $(this).closest('li').addClass('pressed')
+    $(this).closest('li').siblings().removeClass('pressed')
+
+    let parentBlock = $(this).closest('.video-block');
+
+    $(parentBlock).find('.timecode').each(function (index) {
+        if ($(this).closest('li').hasClass('pressed')) {
+            let green = index
+
+            $(parentBlock).find('svg circle').each(function (i) {
+                if (i <= green) {
+                    $(this).css('fill', '#8DE300');
+                } else {
+                    $(this).css('fill', '#D0D0E1');
+                }
+            })
+        }
+    })
+})
+
+
+function videoResize() {
+    let videoWidth = $('.video').outerWidth()
+    let videoHeight = videoWidth * 0.628
+    $('.video').css('height', videoHeight + 'px')
+}
+
+/*---------- бургер-меню -------------*/
+
+$('.header__burger').on('click', function () {
+    closingAside()
 });
 
 $('.dark').on('click', function () {
@@ -118,22 +125,39 @@ $('.aside__close-btn').on('click', function () {
 
 /*----- обработка таймкодов ---------*/
 
-const iframeTheory = $('#theory_video');
-const iframeHomework = $('#homework_video');
-let player = new Vimeo.Player(iframeTheory);
-let player2 = new Vimeo.Player(iframeHomework);
+let tag = document.createElement('script');
 
-$('.timecode-theory').each(function (index) {
-    $(this).on('click', function () {
-        player.setCurrentTime($(this).attr('data-timecode'))
-        player.play();
-    })
+tag.src = "https://www.youtube.com/iframe_api";
+let firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+let videoData = [];
+
+$('.video').each(function () {
+    videoData.push(new Array($(this).attr('data-videohref'), $(this).find('.video_player').attr('id')));
 })
 
-$('.timecode-homework').each(function (index) {
+let curplayer = []
+
+function onYouTubeIframeAPIReady() {
+
+    for (let i = 0; i < videoData.length; i++) {
+        curplayer[i] = createPlayer(videoData[i]);
+    }
+}
+
+function createPlayer(playerInfo) {
+    return new YT.Player(playerInfo[1], {
+        height: '100%',
+        width: '100%',
+        videoId: playerInfo[0],
+        playerVars: {'controls': 1, 'modestbranding': 1, 'showinfo': 0, 'rel': 0, 'iv_load_policy': 3}
+    });
+}
+
+$('.timecode').each(function () {
     $(this).on('click', function () {
-        player2.setCurrentTime($(this).attr('data-timecode'))
-        player2.play();
+        curplayer[this.dataset.index].seekTo(this.dataset.timecode);
     })
 })
 
@@ -141,7 +165,7 @@ $('.timecode-homework').each(function (index) {
 
 videoResize()
 
-$(".content").on('transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransitionEnd', function() {
+$(".content").on('transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransitionEnd', function () {
     videoResize()
 });
 
