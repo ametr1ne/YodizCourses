@@ -28,7 +28,7 @@
             </svg>
         </div>
         <div class="header__btns">
-            <a href="https://yodizschool.ru/online" class="btn buy-course__btn header__buy-course header__btn">
+            <a href="https://yodizschool.ru/online" target="_blank" class="btn buy-course__btn header__buy-course header__btn">
                 <svg width="18" height="22" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_4_76)">
                         <path d="M9.96582 13.2H7.83887V17.6H9.96582V13.2Z" fill="white"/>

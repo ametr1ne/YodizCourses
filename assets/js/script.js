@@ -1,16 +1,53 @@
-$('.lessons-list li').each(function (i) {
+$('.lessons-list li').each(function () {
+    if ($(this).hasClass('selected')) {
+        $(this).addClass('completed')
+    } else {
+        $(this).removeClass('completed')
+    }
+})
+
+function hidePopups() {
+    $('body').removeClass('showFreePopup');
+    $('body').removeClass('showPaidPopup');
+}
+
+function closeAside() {
+    $('body').removeClass('open-aside')
+    $('.header__line--3').removeClass('header__line--3-fly');
+    $('.header__burger').removeClass('closed');
+    $('.header__line--2').removeClass('header__line--2-fly');
+}
+
+$('.free-lessons li').each(function () {
     $(this).on('click', function () {
-        let href = $(this).attr('data-href');
-
-        $(location).attr('href',href);
-
-        $('.lessons-list li').each(function (ind) {
-            if (ind === i) {
-                $(this).addClass('selected')
-            } else $(this).removeClass('selected')
-        })
+        if (!$(this).hasClass('selected')) {
+            $('body').addClass('showFreePopup');
+            closeAside()
+        }
     })
 })
+
+$('.paid-lessons li').each(function () {
+    $(this).on('click', function () {
+        if (!$(this).hasClass('selected')) {
+            $('body').addClass('showPaidPopup');
+            closeAside()
+        }
+    })
+})
+
+$('.close').on('click', function () {
+    hidePopups()
+})
+
+$('.dark-popup').on('click', function () {
+    hidePopups()
+})
+
+$('.popup__btn').on('click', function () {
+    hidePopups()
+})
+
 
 $('.number').each(function (i) {
     $(this).text(i + 1)
@@ -18,64 +55,45 @@ $('.number').each(function (i) {
 
 $(document).on('ready', function () {
     let toolsHeight = $('.tools').outerHeight(true)
-    console.log(toolsHeight)
     $('.progress__categories').css('max-height', toolsHeight + 'px')
 })
-
 
 $('.btn-arrow').on('click', function () {
     $('.progress').toggleClass('open-body')
 })
 
-$('.theory .timecode').each(function (index) {
-    $(this).on('click', function () {
+/*---------------- timecodes --------------*/
 
-        $('.theory .timecode').each(function (ind) {
-            if (ind === index)
-                $(this).addClass('pressed')
-            else $(this).removeClass('pressed')
-        })
+$('.timecode').on('click', function () {
 
-        $('.theory .timecode svg circle').each(function (i) {
-            if (i <= index) {
-                $(this).css('fill', '#8DE300');
-            } else {
-                $(this).css('fill', '#D0D0E1');
-            }
-        })
+    $(this).closest('li').addClass('pressed')
+    $(this).closest('li').siblings().removeClass('pressed')
+
+    let parentBlock = $(this).closest('.video-block');
+
+    $(parentBlock).find('.timecode').each(function (index) {
+        if ($(this).closest('li').hasClass('pressed')) {
+            let green = index
+
+            $(parentBlock).find('svg circle').each(function (i) {
+                if (i <= green) {
+                    $(this).css('fill', '#8DE300');
+                } else {
+                    $(this).css('fill', '#D0D0E1');
+                }
+            })
+        }
     })
 })
 
-$('.homework .timecode').each(function (index) {
-    $(this).on('click', function () {
-
-        $('.homework .timecode').each(function (ind) {
-            if (ind === index)
-                $(this).addClass('pressed')
-            else $(this).removeClass('pressed')
-        })
-
-        $('.homework .timecode svg circle').each(function (i) {
-            if (i <= index) {
-                $(this).css('fill', '#8DE300');
-            } else {
-                $(this).css('fill', '#D0D0E1');
-            }
-        })
-    })
-})
-
-// $('.timecode').each(function () {
-//     $(this).on('click', function () {
-//
-//     })
-// })
 
 function videoResize() {
     let videoWidth = $('.video').outerWidth()
     let videoHeight = videoWidth * 0.628
     $('.video').css('height', videoHeight + 'px')
 }
+
+/*---------- бургер-меню -------------*/
 
 $('.header__burger').on('click', function () {
     $('body').toggleClass('open-aside')
@@ -98,10 +116,7 @@ $('.header__burger').on('click', function () {
 });
 
 $('.dark').on('click', function () {
-    $('body').removeClass('open-aside')
-    $('.header__line--3').removeClass('header__line--3-fly');
-    $('.header__burger').removeClass('closed');
-    $('.header__line--2').removeClass('header__line--2-fly');
+    closeAside()
 })
 
 $('.aside__close-btn').on('click', function () {
@@ -122,26 +137,25 @@ $('.video').each(function () {
     videoData.push(new Array($(this).attr('data-videohref'), $(this).find('.video_player').attr('id')));
 })
 
-console.log(videoData)
-
 let curplayer = []
 
 function onYouTubeIframeAPIReady() {
 
-    for(let i = 0; i < videoData.length;i++) {
+    for (let i = 0; i < videoData.length; i++) {
         curplayer[i] = createPlayer(videoData[i]);
     }
 }
+
 function createPlayer(playerInfo) {
     return new YT.Player(playerInfo[1], {
         height: '100%',
         width: '100%',
         videoId: playerInfo[0],
-        playerVars: {'controls': 1, 'modestbranding': 1, 'showinfo': 0, 'rel': 0, 'iv_load_policy': 3 }
+        playerVars: {'controls': 1, 'modestbranding': 1, 'showinfo': 0, 'rel': 0, 'iv_load_policy': 3}
     });
 }
 
-$('.timecode-theory').each(function () {
+$('.timecode').each(function () {
     $(this).on('click', function () {
         curplayer[this.dataset.index].seekTo(this.dataset.timecode);
     })
@@ -151,7 +165,7 @@ $('.timecode-theory').each(function () {
 
 videoResize()
 
-$(".content").on('transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransitionEnd', function() {
+$(".content").on('transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransitionEnd', function () {
     videoResize()
 });
 

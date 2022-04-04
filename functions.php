@@ -11,13 +11,60 @@ function selectingPage($post, $link)
         echo 'selected';
 }
 
-function showTheory()
+
+global $wpdb;
+
+$bd_date = $wpdb->get_results("SELECT datetime FROM randomizer_bd WHERE `name` = 'free_random'");
+
+$current_date = date('U');
+
+if (($bd_date[0]->datetime + 86400) < $current_date) {
+
+    $wpdb->update('randomizer_bd',
+        ['datetime' => date('U')],
+        ['name' => 'free_random']
+    );
+
+    $wpdb->update('randomizer_bd',
+        ['datetime' => date('U')],
+        ['name' => 'paid_random']
+    );
+
+    $wpdb->update('randomizer_bd',
+        ['value' => rand(463, 485)],
+        ['name' => 'free_random']
+    );
+
+    $wpdb->update('randomizer_bd',
+        ['value' => rand(45, 59)],
+        ['name' => 'paid_random']
+    );
+}
+
+function freeRandom()
+{
+    global $wpdb;
+
+    $users_count = $wpdb->get_results("SELECT value FROM randomizer_bd WHERE `name` = 'free_random'");
+
+    echo $users_count[0]->value;
+}
+
+function paidRandom()
+{
+    global $wpdb;
+
+    $users_count = $wpdb->get_results("SELECT value FROM randomizer_bd WHERE `name` = 'paid_random'");
+
+    echo $users_count[0]->value;
+}
+
+function showVideos()
 {
 
     $listTheory = fillArrayTheory();
 
     if ($listTheory != null) {
-
 
         foreach ($listTheory as $index => $post_item) { ?>
             <div class="theory content-item video-block">
@@ -47,10 +94,6 @@ function showTheory()
             <?php
         }
     }
-}
-
-function showPractice()
-{
 
     $listPractice = fillArrayPractice();
 
@@ -151,10 +194,11 @@ function showMaterials()
             ?>
             <div class="materials content-item">
                 <h2>Материалы</h2>
-                <!--        --><?// foreach ($materials as $item) {?>
-                <a href="<?= $materials_list['materials_link'][0] ?>"><?= $materials_list['name_link'][0] ?></a>
+                <? for ($i = 0; $i < count($materials_list['materials_link']); $i++) { ?>
+                    <a href="<?= $materials_list['materials_link'][$i] ?>"
+                       target="_blank"><?= $materials_list['name_link'][$i] ?></a>
 
-                <!--        --><?// } ?>
+                <? } ?>
             </div>
             <?php
         }

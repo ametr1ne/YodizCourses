@@ -11,6 +11,8 @@ html {
 body {
   font-family: "Proxima Nova Rg", sans-serif;
   font-size: 1rem;
+  position: relative;
+  display: block;
 }
 
 ul {
@@ -47,23 +49,7 @@ header {
 .header {
 
   &__logo {
-    cursor: pointer;
     transition: margin-left 0.4s;
-
-    svg {
-      path {
-        transition: fill 0.2s linear;
-      }
-    }
-
-    &:hover {
-      svg {
-        path {
-          fill: #f00;
-          transition: fill 0.2s linear;
-        }
-      }
-    }
   }
 
   &__wrapper {
@@ -180,13 +166,15 @@ a {
   font-size: 19px;
   line-height: 130%;
   letter-spacing: -0.02em;
-  color: #0500FF;
+  //color: #0500FF;
+  color: black;
   font-weight: normal;
   transition: color 0.3s;
   text-decoration: none;
 
   &:not(.btn):hover {
-    color: #ff0000;
+    //color: #ff0000;
+    color: #0500FF;
     transition: color 0.3s;
   }
 
@@ -287,6 +275,10 @@ a {
         margin-top: 10px;
         display: flex;
         flex-wrap: wrap;
+
+        a {
+          color: #0500FF;
+        }
 
         p {
           font-size: 19px;
@@ -424,7 +416,167 @@ a {
   }
 
   .bottom {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
     margin-top: 24px;
+    grid-row-gap: 20px;
+
+    .footer-left {
+      padding-right: 15px;
+    }
+  }
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 200;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.4s;
+
+  width: 960px;
+  background: #FFFFFF;
+  border-radius: 10px;
+  padding: 40px 34px;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .lock {
+      margin-bottom: 17px;
+    }
+
+    h2 {
+      margin-bottom: 22px;
+      text-align: center;
+    }
+
+    p {
+      font-weight: 400;
+      line-height: 130%;
+      text-align: center;
+      letter-spacing: -0.02em;
+    }
+
+    .free {
+      font-size: 30px;
+    }
+
+    .paid {
+      font-size: 19px;
+    }
+
+    .popup__btn {
+      margin-top: 34px;
+      background-color: #0500FF;
+      border-radius: 100px;
+      padding: 0 177px;
+      height: 70px;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.4s;
+
+      &:hover {
+        background-color: #ff0000;
+      }
+    }
+  }
+
+  .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 1024px) {
+  .popup {
+    width: 740px;
+
+    &__content {
+      .free {
+        font-size: 25px;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .popup {
+    margin: auto;
+    width: 95%;
+    right: 0;
+    left: 0;
+    transform: translate(0, -50%);
+    padding: 20px 18px;
+
+    &__content {
+      .free {
+        font-size: 19px;
+      }
+
+      .paid {
+        font-size: 16px;
+      }
+
+      .popup__btn {
+        width: 100%;
+        height: 60px;
+        padding: 0 15px;
+      }
+    }
+  }
+
+  .free-popup {
+    padding-top: 50px;
+  }
+}
+
+.dark-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 130%;
+  width: 100%;
+  z-index: 150;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.showFreePopup {
+  overflow: hidden;
+
+  .free-popup {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .dark-popup {
+    display: block;
+  }
+}
+
+.showPaidPopup {
+  overflow: hidden;
+
+  .paid-popup {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .dark-popup {
+    display: block;
   }
 }
 
@@ -658,6 +810,7 @@ a {
             margin-right: 18px;
             font-size: 14px;
           }
+
           p {
             font-size: 14px;
           }

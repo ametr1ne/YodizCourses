@@ -16,8 +16,8 @@
         <small class="text-grey">Уровень знаний в профессии</small>
         <div class="progress__box">
             <div class="text">		
-                <h3 class="text__name">Дима Зубков</h3>
-                <h3 class="text__percent"><?php the_field('account_percent') ?>%</h3>
+                <h3 class="text__name">Начальный уровень</h3>
+                <h3 class="text__percent"><?php the_field('account_percent') ?> %</h3>
             </div>
             <div class="progress__bar">
                 <div class="bar__grey"></div>
@@ -30,7 +30,7 @@
                 <div class="tools__item">
                     <div class="tools__title">
                         <small class="tools__name text-grey">Figma</small>
-                        <small class="tools__percent text-grey"><?php the_field('skills_percent_figma') ?>%</small>
+                        <small class="tools__percent text-grey"><?php the_field('skills_percent_figma') ?> %</small>
                     </div>
                     <div class="tools__bar">
                         <div class="bar__grey"></div>
@@ -40,7 +40,7 @@
                 <div class="tools__item">
                     <div class="tools__title">
                         <small class="tools__name text-grey">Photoshop</small>
-                        <small class="tools__percent text-grey"><?php the_field('skills_percent_photoshop') ?>%</small>
+                        <small class="tools__percent text-grey"><?php the_field('skills_percent_photoshop') ?> %</small>
                     </div>
                     <div class="tools__bar">
                         <div class="bar__grey"></div>
@@ -50,8 +50,7 @@
                 <div class="tools__item">
                     <div class="tools__title">
                         <small class="tools__name text-grey">Illustrator</small>
-                        <small class="tools__percent text-grey"><?php the_field('skills_percent_illustrator') ?>
-                            %</small>
+                        <small class="tools__percent text-grey"><?php the_field('skills_percent_illustrator') ?> %</small>
                     </div>
                     <div class="tools__bar">
                         <div class="bar__grey"></div>
@@ -61,7 +60,7 @@
                 <div class="tools__item">
                     <div class="tools__title">
                         <small class="tools__name text-grey">Animate</small>
-                        <small class="tools__percent text-grey"><?php the_field('skills_percent_animate') ?>%</small>
+                        <small class="tools__percent text-grey"><?php the_field('skills_percent_animate') ?> %</small>
                     </div>
                     <div class="tools__bar">
                         <div class="bar__grey"></div>
@@ -74,7 +73,7 @@
                 <div class="tools__item">
                     <div class="tools__title">
                         <small class="tools__name text-grey">Уровень нормы</small>
-                        <small class="tools__percent text-grey"><?php the_field('skills_percent_norm_level') ?>%</small>
+                        <small class="tools__percent text-grey"><?php the_field('skills_percent_norm_level') ?> %</small>
                     </div>
                     <div class="tools__bar">
                         <div class="bar__grey"></div>
@@ -84,8 +83,7 @@
                 <div class="tools__item">
                     <div class="tools__title">
                         <small class="tools__name text-grey">Технический дизайн</small>
-                        <small class="tools__percent text-grey"><?php the_field('skills_percent_technic_design') ?>
-                            %</small>
+                        <small class="tools__percent text-grey"><?php the_field('skills_percent_technic_design') ?> %</small>
                     </div>
                     <div class="tools__bar">
                         <div class="bar__grey"></div>
@@ -96,7 +94,7 @@
                 <div class="tools__item">
                     <div class="tools__title">
                         <small class="tools__name text-grey">UX/UI</small>
-                        <small class="tools__percent text-grey"><?php the_field('skills_percent_ux_ui') ?>%</small>
+                        <small class="tools__percent text-grey"><?php the_field('skills_percent_ux_ui') ?> %</small>
                     </div>
                     <div class="tools__bar">
                         <div class="bar__grey"></div>
@@ -106,8 +104,7 @@
                 <div class="tools__item">
                     <div class="tools__title">
                         <small class="tools__name text-grey">Моушн-дизайн</small>
-                        <small class="tools__percent text-grey"><?php the_field('skills_percent_motion_design') ?>
-                            %</small>
+                        <small class="tools__percent text-grey"><?php the_field('skills_percent_motion_design') ?> %</small>
                     </div>
                     <div class="tools__bar">
                         <div class="bar__grey"></div>
@@ -124,13 +121,12 @@
 
 <!-- theory(start) -->
 
-<? showTheory() ?>
+<? showVideos() ?>
 
 <!-- theory(end) -->
 
 <!-- homework(start)-->
 
-<? showPractice() ?>
 
 <!-- homework(end)-->
 
