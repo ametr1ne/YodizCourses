@@ -469,7 +469,7 @@ get_header();
 
 <script src="<?= get_template_directory_uri() ?>/assets/js/jquery.min.js"></script>
 <script src="<?= get_template_directory_uri() ?>/assets/js/simplebar.min.js"></script>
-<script src="<?= get_template_directory_uri() ?>/assets/js/script.js"></script>
+<script src="<?= get_template_directory_uri() ?>/assets/js/script.min.js"></script>
 
 </body>
 </html>

@@ -36,6 +36,10 @@ $('.paid-lessons li').each(function () {
     })
 })
 
+$('.next-lesson').on('click', function () {
+    $('body').addClass('showFreePopup');
+})
+
 $('.close').on('click', function () {
     hidePopups()
 })
@@ -47,7 +51,6 @@ $('.dark-popup').on('click', function () {
 $('.popup__btn').on('click', function () {
     hidePopups()
 })
-
 
 $('.number').each(function (i) {
     $(this).text(i + 1)
@@ -85,7 +88,6 @@ $('.timecode').on('click', function () {
         }
     })
 })
-
 
 function videoResize() {
     let videoWidth = $('.video').outerWidth()

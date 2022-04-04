@@ -5,9 +5,9 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link rel="stylesheet" href="<?=get_template_directory_uri()?>/assets/scss/simplebar.css"/>
+	<link rel="stylesheet" href="<?=get_template_directory_uri()?>/dev/assetssets/scss/simplebar.css"/>
 <!--    <link rel="stylesheet" href="assets/scss/lesson1.css">-->
-    <link rel="icon" type="image/x-icon" href="<?=get_template_directory_uri()?>/assets/img/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="<?=get_template_directory_uri()?>/dev/assetssets/img/favicon.svg">
     <title>Инструменты и навыки веб-дизайнера</title>
     <?php wp_head();?>
 </head>

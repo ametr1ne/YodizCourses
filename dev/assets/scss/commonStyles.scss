@@ -851,9 +851,15 @@ a {
 
     .bottom {
       margin-top: 0;
+      grid-row-gap: 0;
 
-      a {
-        margin-bottom: 12px;
+      .footer-left {
+        display: flex;
+        flex-wrap: wrap;
+
+        a {
+          margin-bottom: 12px;
+        }
       }
     }
 
