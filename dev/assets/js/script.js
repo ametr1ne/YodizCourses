@@ -91,7 +91,7 @@ $('.timecode').on('click', function () {
 
 function videoResize() {
     let videoWidth = $('.video').outerWidth()
-    let videoHeight = videoWidth * 0.628
+    let videoHeight = videoWidth * 0.56
     $('.video').css('height', videoHeight + 'px')
 }
 
@@ -153,7 +153,7 @@ function createPlayer(playerInfo) {
         height: '100%',
         width: '100%',
         videoId: playerInfo[0],
-        playerVars: {'controls': 1, 'modestbranding': 1, 'showinfo': 0, 'rel': 0, 'iv_load_policy': 3}
+        playerVars: {'controls': 1, 'modestbranding': 1, 'showinfo': 0, 'rel': 0, 'iv_load_policy': 3, 'fmt': 22}
     });
 }
 
