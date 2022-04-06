@@ -61,7 +61,7 @@ function paidRandom()
 function showVideos()
 {
 
-    $listTheory = fillArrayTheory();
+    $listTheory = fillVideosArray();
 
     if ($listTheory != null) {
 

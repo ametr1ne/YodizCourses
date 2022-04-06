@@ -78,6 +78,9 @@ function videoResize() {
     let videoHeight = videoWidth * 0.56
     $('.video').css('height', videoHeight + 'px')
 }
+
+videoResize()
+
 $('.header__burger').on('click', function() {
     $('body').toggleClass('open-aside')
     $('body').removeClass('close-aside')
@@ -102,43 +105,17 @@ $('.aside__close-btn').on('click', function() {
     $('body').addClass('close-aside')
 })
 
-let tag = document.createElement('script');
-tag.src = "https://www.youtube.com/iframe_api";
-let firstScriptTag = document.getElementsByTagName('script')[0];
-firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-let videoData = [];
-$('.video').each(function() {
-    videoData.push(new Array($(this).attr('data-videohref'), $(this).find('.video_player').attr('id')))
-})
-let curplayer = []
+let iframe = document.querySelectorAll('iframe');
 
-function onYouTubeIframeAPIReady() {
-    for (let i = 0; i < videoData.length; i++) {
-        curplayer[i] = createPlayer(videoData[i])
-    }
-}
+$('.timecode').on('click', function () {
+    $index = $(this).attr('data-index');
 
-function createPlayer(playerInfo) {
-    return new YT.Player(playerInfo[1], {
-        height: '100%',
-        width: '100%',
-        videoId: playerInfo[0],
-        playerVars: {
-            'controls': 1,
-            'modestbranding': 1,
-            'showinfo': 0,
-            'rel': 0,
-            'iv_load_policy': 3,
-            'fmt': 22
-        }
-    })
-}
-$('.timecode').each(function() {
-    $(this).on('click', function() {
-        curplayer[this.dataset.index].seekTo(this.dataset.timecode)
-    })
+    let player = new Vimeo.Player(iframe[$index]);
+
+    player.setCurrentTime($(this).attr('data-timecode'))
+    player.play();
 })
-videoResize()
+
 $(".content").on('transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransitionEnd', function() {
     videoResize()
 });
