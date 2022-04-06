@@ -35,7 +35,7 @@ get_header();
                     </div>
                     <div class="course__progress">
                         <ul class="lessons-list free-lessons">
-                            <li class="<?php selectingPage($post->post_name, 'intro1') ?> free-item">
+                            <li class="<?php selectingPage($post->post_name, 'intro') ?> free-item">
                                 <a>
                                     <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
@@ -44,7 +44,7 @@ get_header();
                                     Введение
                                 </a>
                             </li>
-                            <li class="<?php selectingPage($post->post_name, '1-1') ?> free-item"><span class="number">1</span>
+                            <li class="<?php selectingPage($post->post_name, 'toolsandskills') ?> free-item"><span class="number">1</span>
                                 <a>
                                     <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
@@ -53,7 +53,7 @@ get_header();
                                     Инструменты и навыки веб-дизайнера
                                 </a>
                             </li>
-                            <li class="<?php selectingPage($post->post_name, '1-2') ?> free-item"><span class="number">2</span>
+                            <li class="<?php selectingPage($post->post_name, 'bannerinfigma') ?> free-item"><span class="number">2</span>
                                 <a>
                                     <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
@@ -62,7 +62,7 @@ get_header();
                                     Статичный баннер в Figma
                                 </a>
                             </li>
-                            <li class="<?php selectingPage($post->post_name, '1-3') ?> free-item"><span class="number">3</span>
+                            <li class="<?php selectingPage($post->post_name, 'videobanner') ?> free-item"><span class="number">3</span>
                                 <a>
                                     <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
@@ -71,7 +71,7 @@ get_header();
                                     Видео баннер в Photoshop? Легко!
                                 </a>
                             </li>
-                            <li class="<?php selectingPage($post->post_name, '1-4') ?> free-item"><span class="number">4</span>
+                            <li class="<?php selectingPage($post->post_name, 'motiondesign') ?> free-item"><span class="number">4</span>
                                 <a>
                                     <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
@@ -80,7 +80,7 @@ get_header();
                                     Основы моушн-дизайна
                                 </a>
                             </li>
-                            <li class="<?php selectingPage($post->post_name, '1-5') ?> free-item"><span class="number">5</span>
+                            <li class="<?php selectingPage($post->post_name, 'bonus') ?> free-item"><span class="number">5</span>
                                 <a>
                                     <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
@@ -386,7 +386,7 @@ get_header();
     <div class="content">
         <div class="content__wrapper">
 
-            <p class="breadcrumbs text-grey">Веб-дизайн, быстрый старт / Урок 1</p>
+            <p class="breadcrumbs text-grey">Веб-дизайн, быстрый старт / <?php the_field('lesson_num') ?></p>
             <h1><?php the_field('title_name') ?></h1>
 
             <?php include 'assets/componets/free_lesson1.php' ?>
@@ -467,9 +467,10 @@ get_header();
 
 <!-- main(end) -->
 
-<script src="<?= get_template_directory_uri() ?>/dev/assetssets/js/jquery.min.js"></script>
-<script src="<?= get_template_directory_uri() ?>/dev/assetssets/js/simplebar.min.js"></script>
-<script src="<?= get_template_directory_uri() ?>/dev/assetssets/js/script.js"></script>
+<script src="<?= get_template_directory_uri() ?>/assets/js/jquery.min.js"></script>
+<script src="<?= get_template_directory_uri() ?>/assets/js/simplebar.min.js"></script>
+<script src="<?= get_template_directory_uri() ?>/assets/js/player.js"></script>
+<script src="<?= get_template_directory_uri() ?>/assets/js/script.js"></script>
 
 </body>
 </html>

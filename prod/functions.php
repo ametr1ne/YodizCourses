@@ -2,7 +2,6 @@
 
 add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('style', get_template_directory_uri() . '/assets/css/lesson1.min.css');
-    wp_enqueue_style('style', get_template_directory_uri() . '/assets/css/simplebar.min.css');
 });
 
 function selectingPage($post, $link)
@@ -66,9 +65,11 @@ function showVideos()
 
     if ($listTheory != null) {
 
-        foreach ($listTheory as $index => $post_item) { ?>
+        foreach ($listTheory as $index => $post_item) {
+
+            $videoTitle = get_post_meta((int)SCF::get('theory')[0][$index])['video_title'];?>
             <div class="theory content-item video-block">
-                <h2>Теория</h2>
+                <h2><?= $videoTitle[0] ?></h2>
                 <div class="video" data-videohref="<?= $post_item['video_link'] ?>">
                     <div class="video_player" id="theory_player<?= $index ?>"></div>
                 </div>
@@ -99,9 +100,10 @@ function showVideos()
 
     if ($listPractice != null) {
 
-        foreach ($listPractice as $index => $post_item) { ?>
+        foreach ($listPractice as $index => $post_item) {
+            $videoTitle = get_post_meta((int)SCF::get('practice')[0][$index])['video_title'];?>
             <div class="homework content-item video-block">
-                <h2>Практика + домашнее задание</h2>
+                <h2><?= $videoTitle[0] ?></h2>
                 <div class="video" data-videohref="<?= $post_item['video_link'] ?>">
                     <div class="video_player" id="practice_player<?= $index ?>"></div>
                 </div>
