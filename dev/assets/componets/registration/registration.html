@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../scss/registation/registation.css">
+    <script defer src="../../js/jquery.min.js"></script>
+    <script defer src="../../js/jquery.validate.min.js"></script>
+    <script defer src="../../js/registration.js"></script>
+    <title>Регистрация в Yodiz School</title>
+</head>
+<body>
+<header class="header">
+    <div class="header__wrapper">
+        <div class="header__logo">
+            <svg width="70" height="54" viewBox="0 0 70 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M52.0732 0.263916H17.9268L0 18.3755L35 53.7361L70 18.3755L52.0732 0.263916ZM40.0707 26.1548V39.0744H29.9293V26.1548L17.9268 14.0115L23.8512 8.02601L35 19.2897L46.1488 8.02601L52.0732 14.0115L40.0707 26.1548Z"
+                      fill="black"/>
+            </svg>
+        </div>
+        <div class="header__btns">
+            <a class="btn header__btn border-btn">Зарегистрироваться</a>
+            <a class="btn header__btn border-btn">Войти</a>
+        </div>
+    </div>
+</header>
+<main>
+    <form id="registration-form">
+        <h2>Регистрация в Yodiz School</h2>
+        <div class="email input-block">
+            <label class="text-grey">Введите e-mail</label>
+            <input name="email" class="input" type="email" aria-describedby="error-email">
+        </div>
+        <span class="error" id="error-email"></span>
+        <div class="pass input-block">
+            <label class="text-grey">Придумайте пароль</label>
+            <input name="password" class="input" type="password" aria-describedby="error-pass">
+        </div>
+        <span class="error" id="error-pass"></span>
+        <button class="btn submit-btn">Зарегистрироваться</button>
+        <p class="text-grey">Нажимая кнопку, принимаю условия политики и пользовательского соглашения</p>
+        <p class="text-grey">Уже есть аккаунт? <a href="autorization.html">Войти</a></p>
+
+    </form>
+</main>
+</body>
+</html>
