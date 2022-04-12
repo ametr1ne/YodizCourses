@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../../scss/registation/registation.css">
     <script defer src="../../js/jquery.min.js"></script>
     <script defer src="../../js/jquery.validate.min.js"></script>
+    <script defer src="../../js/messages_ru.js"></script>
     <script defer src="../../js/registration.js"></script>
     <title>Регистрация в Yodiz School</title>
 </head>
@@ -21,8 +22,8 @@
             </svg>
         </div>
         <div class="header__btns">
-            <a class="btn header__btn border-btn">Зарегистрироваться</a>
-            <a class="btn header__btn border-btn">Войти</a>
+            <a href="registration.html" class="btn header__btn border-btn">Зарегистрироваться</a>
+            <a href="autorization.html" class="btn header__btn border-btn">Войти</a>
         </div>
     </div>
 </header>
@@ -31,18 +32,17 @@
         <h2>Регистрация в Yodiz School</h2>
         <div class="email input-block">
             <label class="text-grey">Введите e-mail</label>
-            <input name="email" class="input" type="email" aria-describedby="error-email">
+            <input name="email" class="input" type="email">
+            <span class="error" id="error-email"></span>
         </div>
-        <span class="error" id="error-email"></span>
         <div class="pass input-block">
             <label class="text-grey">Придумайте пароль</label>
-            <input name="password" class="input" type="password" aria-describedby="error-pass">
+            <input name="password" class="input" type="password">
+            <span class="error" id="error-pass"></span>
         </div>
-        <span class="error" id="error-pass"></span>
         <button class="btn submit-btn">Зарегистрироваться</button>
         <p class="text-grey">Нажимая кнопку, принимаю условия политики и пользовательского соглашения</p>
         <p class="text-grey">Уже есть аккаунт? <a href="autorization.html">Войти</a></p>
-
     </form>
 </main>
 </body>

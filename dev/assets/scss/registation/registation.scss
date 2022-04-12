@@ -31,41 +31,17 @@ body {
   }
 }
 
-.header {
-  padding: 0 30px 0;
-  background: none;
-
-  &__logo {
-    margin-left: 0;
-  }
-
-  &__wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  &__btns {
-    display: flex;
-  }
-  &__btn {
-    height: 60px;
-    font-family: "Proxima Nova Rg", sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid rgba(196, 196, 196, 0.5);
-    box-sizing: border-box;
-    border-radius: 100px;
-    padding: 0 37px;
-    font-size: 19px;
-    line-height: 140%;
-    color: black;
-  }
-}
-
 main {
   height: 100%;
   position: relative;
+}
+
+span.error {
+  position: absolute;
+  right: 0;
+  color: red;
+  font-size: 12px;
+  top: 106%;
 }
 
 form {
@@ -76,10 +52,8 @@ form {
   top: 135px;
   margin: 135px auto 0;
 
-  .error {
-    margin-top: 10px;
-    color: red;
-    font-size: 14px;
+  .input.error {
+    border-bottom: 1px solid red;
   }
 
   a {
@@ -115,21 +89,26 @@ form {
     margin-bottom: 27px;
   }
 
+  div {
+    width: 100%;
+  }
+
   .input-block {
     display: flex;
     flex-direction: column;
     position: relative;
-    width: 100%;
 
     label {
       position: absolute;
       bottom: 10px;
       cursor: text;
-      transition: bottom 0.4s, font-size 0.4s;
+      transition: bottom 0.4s, transform 0.4s;
+      transform: scale(1);
+      transform-origin: left;
     }
     input {
       outline: none;
-      padding: 0 0 13px;
+      padding: 9px 0 9px;
       font-size: 19px;
       line-height: 140%;
       border: none;
@@ -143,7 +122,8 @@ form {
   .moving-label {
     label {
       bottom: 42px;
-      font-size: 16px;
+      margin-right: auto;
+      transform: scale(0.84, 0.84);
     }
   }
 
@@ -224,6 +204,7 @@ form {
 
 .details {
   max-width: 960px;
+  padding-bottom: 0;
 
   h2 {
     margin-bottom: 16px;
@@ -247,11 +228,16 @@ form {
   .data-sex {
     display: flex;
     align-items: flex-end;
+    grid-column-gap: 55px;
 
     .sex {
-      margin-left: 55px;
       display: flex;
       align-items: center;
+      position: relative;
+
+      span.error {
+        right: unset;
+      }
 
       p {
         margin-right: 17px;
@@ -287,13 +273,16 @@ form {
 
   .skill-level {
     display: flex;
+    grid-column-gap: 7px;
+    grid-row-gap: 7px;
     margin-top: 17px;
+    position: relative;
+
+    span.error {
+      right: unset;
+    }
 
     .level-item {
-      &:not(:last-child) {
-        margin-right: 7px;
-      }
-
       .level-input {
         height: 0;
         width: 0;
@@ -320,15 +309,83 @@ form {
 
   .submit-btn {
     margin-top: 55px;
+    margin-bottom: 40px;
   }
 }
 
 @media (max-width: 767px) {
+
+  main {
+    padding: 0 15px;
+  }
   form {
     width: 100%;
+    padding: 20px 30px 16px;
 
-    button {
+    h2 {
+      font-size: 25px;
+      margin-bottom: 20px;
+    }
+
+    label, p {
+      font-size: 16px;
+    }
+
+    .submit-btn {
       height: 60px;
+      font-size: 16px;
+      margin: 30px 2px;
+    }
+
+    .input-block {
+      input {
+        margin: 25px 2px 0;
+        font-size: 16px;
+      }
+    }
+
+    .moving-label {
+      label {
+        bottom: 30px;
+      }
+    }
+  }
+
+  .details {
+    .correction {
+      font-size: 25px;
+    }
+
+    .names {
+      flex-direction: column;
+    }
+
+    .data-sex {
+      flex-direction: column;
+
+      .sex {
+        margin-top: 20px;
+
+        p {
+          margin-right: 0;
+        }
+      }
+    }
+
+    .level-title {
+      margin-top: 25px;
+    }
+
+    .skill-level {
+      flex-wrap: wrap;
+      div {
+        width: unset;
+      }
+    }
+
+    .submit-btn {
+      margin-top: 40px;
+      margin-bottom: 30px;
     }
   }
 }

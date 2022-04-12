@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../../scss/registation/registation.css">
     <script defer src="../../js/jquery.min.js"></script>
     <script defer src="../../js/jquery.validate.min.js"></script>
+    <script defer src="../../js/messages_ru.js"></script>
     <script defer src="../../js/registration.js"></script>
     <title>Восстановление пароля</title>
 </head>
@@ -21,8 +22,8 @@
             </svg>
         </div>
         <div class="header__btns">
-            <a class="btn header__btn border-btn">Зарегистрироваться</a>
-            <a class="btn header__btn border-btn">Войти</a>
+            <a href="registration.html" class="btn header__btn border-btn">Зарегистрироваться</a>
+            <a href="autorization.html" class="btn header__btn border-btn">Войти</a>
         </div>
     </div>
 </header>
@@ -31,7 +32,8 @@
         <h2 style="margin-bottom: 6px">Придумайте новый пароль</h2>
         <div class="email input-block">
             <label class="text-grey">Новый пароль</label>
-            <input class="input" type="password" required>
+            <input name="password" class="input" type="password" aria-describedby="error-pass">
+            <span class="error" id="error-pass"></span>
         </div>
         <button class="submit-btn change-btn">Изменить</button>
     </form>

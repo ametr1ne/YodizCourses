@@ -5,10 +5,11 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="<?=get_template_directory_uri()?>/assets/css/simplebar.min.css"/>
-    <link rel="icon" type="image/x-icon" href="<?=get_template_directory_uri()?>/assets/img/favicon.svg">
+    <link rel="stylesheet" href="<?= get_template_directory_uri() ?>/assets/css/simplebar.min.css"/>
+    <link rel="stylesheet" href="<?= get_template_directory_uri() ?>/assets/scss/registation/registation.css">
+    <link rel="icon" type="image/x-icon" href="<?= get_template_directory_uri() ?>/assets/img/favicon.svg">
     <title><?php the_field('head_title') ?></title>
-    <?php wp_head();?>
+    <?php wp_head(); ?>
 </head>
 <body>
 <div class="dark"></div>
@@ -27,7 +28,8 @@
             </svg>
         </div>
         <div class="header__btns">
-            <a href="https://yodizschool.ru/online" target="_blank" class="btn buy-course__btn header__buy-course header__btn">
+            <a href="https://yodizschool.ru/online" target="_blank"
+               class="btn buy-course__btn header__buy-course header__btn">
                 <svg width="18" height="22" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_4_76)">
                         <path d="M9.96582 13.2H7.83887V17.6H9.96582V13.2Z" fill="white"/>
@@ -43,7 +45,7 @@
                 </svg>
                 Купить курс «Профессия веб-дизайнер»
             </a>
-            <!--            <a class="btn header__user-btn header__btn">Дима Зубков</a>-->
+            <a class="btn header__user-btn header__btn">Дима Зубков</a>
         </div>
     </div>
 </header>

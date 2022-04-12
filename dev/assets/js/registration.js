@@ -11,21 +11,21 @@ $('.input').on('blur', function () {
 // $('.submit-btn').on('click', function (e) {
 //     e.preventDefault();
 // })
-
+//
 // $('.recovery-btn').on('click', function () {
 //     $('form').addClass('recovery-password');
 // })
 
-$('.change-btn').on('click', function () {
-    $('.input-block').hide()
-    $('h2').html('Ваш пароль изменен');
-    $(this).html("Войти в личный кабинет")
-    $(this).css('margin-top', '24px')
-})
+// $('.change-btn').on('click', function () {
+//     $('.input-block').hide()
+//     $('h2').html('Ваш пароль изменен');
+//     $(this).html("Войти в личный кабинет")
+//     $(this).css('margin-top', '24px')
+// })
 
 $(document).ready(function () {
     $('form').validate({
-        errorElement: "span",
+        errorElement: 'span',
         rules: {
             email: {
                 required: true,
@@ -53,35 +53,16 @@ $(document).ready(function () {
             },
             skill_level: {
                 required: true
-            }
+            },
         },
         messages: {
             email: {
-                required: "Необходимо заполнить это поле",
-                email: "Введите корректный e-mail"
-            },
-            password: {
-                required: "Необходимо заполнить это поле",
-                minlength: "Минимальная длина пароля - 5 символов"
-            },
-            name: {
-                required: "Необходимо заполнить это поле"
-            },
-            sec_name: {
-                required: "Необходимо заполнить это поле"
-            },
-            phone: {
-                required: "Необходимо заполнить это поле"
-            },
-            date: {
-                required: "Необходимо заполнить это поле"
+                email: "Некорректный e-mail"
             },
             sex: {
-                required: "Необходимо заполнить это поле"
+                required: "Выберите, пожалуйста, пол"
             },
-            skill_level: {
-                required: "Необходимо заполнить это поле"
-            }
+            skill_level: "Выберите, пожалуйста, ваш уровень знаний"
         }
     });
 })

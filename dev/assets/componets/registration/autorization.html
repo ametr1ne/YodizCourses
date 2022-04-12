@@ -6,8 +6,10 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../../scss/registation/registation.css">
+    <link rel="stylesheet" href="../../scss/registation/header.css">
     <script defer src="../../js/jquery.min.js"></script>
     <script defer src="../../js/jquery.validate.min.js"></script>
+    <script defer src="../../js/messages_ru.js"></script>
     <script defer src="../../js/registration.js"></script>
     <title>Вход в личный кабинет</title>
 </head>
@@ -21,8 +23,8 @@
             </svg>
         </div>
         <div class="header__btns">
-            <a class="btn header__btn border-btn">Зарегистрироваться</a>
-            <a class="btn header__btn border-btn">Войти</a>
+            <a href="registration.html" class="btn header__btn border-btn">Зарегистрироваться</a>
+            <a href="autorization.html" class="btn header__btn border-btn">Войти</a>
         </div>
     </div>
 </header>
@@ -32,18 +34,17 @@
         <div class="email input-block">
             <label class="text-grey">E-mail</label>
             <input name="email" class="input" type="email" aria-describedby="error-email">
+            <span class="error" id="error-email"></span>
         </div>
-        <span class="error" id="error-email"></span>
         <div class="pass input-block">
             <label class="text-grey">Пароль</label>
             <input name="password" class="input" type="password" aria-describedby="error-pass">
+            <span class="error" id="error-pass"></span>
         </div>
-        <span class="error" id="error-pass"></span>
         <button class="submit-btn">Войти</button>
         <a href="pass_recovery.html" class="recovery">Восстановить пароль</a>
         <p class="text-grey">Нажимая кнопку, принимаю условия политики и пользовательского соглашения</p>
         <p class="text-grey">Еще нет аккаунта? <a href="registration.html">Зарегистрироваться</a></p>
-
     </form>
 </main>
 </body>

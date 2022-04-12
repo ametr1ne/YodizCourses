@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../../scss/registation/registation.css">
     <script defer src="../../js/jquery.min.js"></script>
     <script defer src="../../js/jquery.validate.min.js"></script>
+    <script defer src="../../js/messages_ru.js"></script>
     <script defer src="../../js/registration.js"></script>
     <title>Восстановление пароля</title>
 </head>
@@ -21,8 +22,8 @@
             </svg>
         </div>
         <div class="header__btns">
-            <a class="btn header__btn border-btn">Зарегистрироваться</a>
-            <a class="btn header__btn border-btn">Войти</a>
+            <a href="registration.html" class="btn header__btn border-btn">Зарегистрироваться</a>
+            <a href="autorization.html" class="btn header__btn border-btn">Войти</a>
         </div>
     </div>
 </header>
@@ -32,8 +33,8 @@
         <div class="email input-block">
             <label class="text-grey">E-mail</label>
             <input name="email" class="input" type="email" aria-describedby="error-email">
+            <span class="error" id="error-email"></span>
         </div>
-        <span class="error" id="error-email"></span>
         <p class="text-grey mail-sent">Вам отправлено письмо
             со ссылкой на сброс пароля</p>
         <button style="margin-bottom: 50px;" class="submit-btn recovery-btn">Восстановить пароль</button>
