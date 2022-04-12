@@ -34,77 +34,83 @@
             <div class="names">
                 <div class="first-name input-block">
                     <label class="text-grey">Имя</label>
-                    <input class="input" type="text">
+                    <input name="name" class="input" type="text" aria-describedby="error-name">
                 </div>
+                <span class="error" id="error-name"></span>
                 <div class="last-name input-block">
                     <label class="text-grey">Фамилия</label>
-                    <input class="input" type="text">
+                    <input name="sec_name" class="input" type="text" aria-describedby="error-sec_name">
                 </div>
+                <span class="error" id="error-sec_name"></span>
             </div>
             <div class="phone input-block">
                 <label class="text-grey">Телефон</label>
-                <input class="input" type="text">
+                <input name="phone" class="input" type="text" aria-describedby="error-phone">
             </div>
+            <span class="error" id="error-phone"></span>
             <div class="data-sex">
                 <div class="last-name input-block">
                     <label class="text-grey">Дата рождения</label>
-                    <input class="input" type="text">
+                    <input name="date" class="input" type="text" aria-describedby="error-date">
                 </div>
+                <span class="error" id="error-date"></span>
                 <div class="sex">
                     <p class="text-grey">Пол:</p>
-                    <input class="radio-sex" name="sex" type="radio" id="female">
+                    <input class="radio-sex" name="sex" type="radio" id="female" aria-describedby="error-sex">
                     <label class="text-grey sex-btn border-btn" for="female">Женский</label>
-                    <input class="radio-sex" name="sex" type="radio" id="male">
+                    <input class="radio-sex" name="sex" type="radio" id="male" aria-describedby="error-sex">
                     <label class="text-grey sex-btn border-btn" for="male">Мужской</label>
                 </div>
+                <span class="error" id="error-sex"></span>
             </div>
             <p class="level-title text-grey">Оцените уровень ваших знаний в веб-дизайне от 0 (только начинаю) до 10 (профессионал)</p>
             <div class="skill-level">
                 <div class="level-item">
-                    <input name="skill-level" type="radio" id="0" class="level-input">
+                    <input name="skill_level" type="radio" id="0" class="level-input">
                     <label class="level-label border-btn" for="0">0</label>
                 </div>
                 <div class="level-item">
-                    <input name="skill-level" type="radio" id="1" class="level-input">
+                    <input name="skill_level" type="radio" id="1" class="level-input">
                     <label class="level-label border-btn" for="1">1</label>
                 </div>
                 <div class="level-item">
-                    <input name="skill-level" type="radio" id="2" class="level-input">
+                    <input name="skill_level" type="radio" id="2" class="level-input">
                     <label class="level-label border-btn" for="2">2</label>
                 </div>
                 <div class="level-item">
-                    <input name="skill-level" type="radio" id="3" class="level-input">
+                    <input name="skill_level" type="radio" id="3" class="level-input">
                     <label class="level-label border-btn" for="3">3</label>
                 </div>
                 <div class="level-item">
-                    <input name="skill-level" type="radio" id="4" class="level-input">
+                    <input name="skill_level" type="radio" id="4" class="level-input">
                     <label class="level-label border-btn" for="4">4</label>
                 </div>
                 <div class="level-item">
-                    <input name="skill-level" type="radio" id="5" class="level-input">
+                    <input name="skill_level" type="radio" id="5" class="level-input">
                     <label class="level-label border-btn" for="5">5</label>
                 </div>
                 <div class="level-item">
-                    <input name="skill-level" type="radio" id="6" class="level-input">
+                    <input name="skill_level" type="radio" id="6" class="level-input">
                     <label class="level-label border-btn" for="6">6</label>
                 </div>
                 <div class="level-item">
-                    <input name="skill-level" type="radio" id="7" class="level-input">
+                    <input name="skill_level" type="radio" id="7" class="level-input">
                     <label class="level-label border-btn" for="7">7</label>
                 </div>
                 <div class="level-item">
-                    <input name="skill-level" type="radio" id="8" class="level-input">
+                    <input name="skill_level" type="radio" id="8" class="level-input">
                     <label class="level-label border-btn" for="8">8</label>
                 </div>
                 <div class="level-item">
-                    <input name="skill-level" type="radio" id="9" class="level-input">
+                    <input name="skill_level" type="radio" id="9" class="level-input">
                     <label class="level-label border-btn" for="9">9</label>
                 </div>
                 <div class="level-item">
-                    <input name="skill-level" type="radio" id="10" class="level-input">
+                    <input name="skill_level" type="radio" id="10" class="level-input">
                     <label class="level-label border-btn" for="10">10</label>
                 </div>
             </div>
+            <span class="error" id="error-level"></span>
         </div>
         <button class="btn submit-btn">Сохранить</button>
     </form>

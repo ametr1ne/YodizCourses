@@ -34,16 +34,53 @@ $(document).ready(function () {
             password: {
                 required: true,
                 minlength: 5
+            },
+            name: {
+                required: true,
+                minlength: 3
+            },
+            sec_name: {
+                required: true
+            },
+            phone: {
+                required: true
+            },
+            date: {
+                required: true
+            },
+            sex: {
+                required: true
+            },
+            skill_level: {
+                required: true
             }
         },
         messages: {
             email: {
-                required: "Необходимо заполнить это поле!",
+                required: "Необходимо заполнить это поле",
                 email: "Введите корректный e-mail"
             },
             password: {
-                required: "Поле пароль не может быть пустым!",
+                required: "Необходимо заполнить это поле",
                 minlength: "Минимальная длина пароля - 5 символов"
+            },
+            name: {
+                required: "Необходимо заполнить это поле"
+            },
+            sec_name: {
+                required: "Необходимо заполнить это поле"
+            },
+            phone: {
+                required: "Необходимо заполнить это поле"
+            },
+            date: {
+                required: "Необходимо заполнить это поле"
+            },
+            sex: {
+                required: "Необходимо заполнить это поле"
+            },
+            skill_level: {
+                required: "Необходимо заполнить это поле"
             }
         }
     });
