@@ -1,0 +1,425 @@
+@font-face {
+  font-family: "Proxima Nova Sb";
+  src: url(../fonts/ProximaNova-Semibold.woff2) format("woff2"), url(../fonts/ProximaNova-Semibold.woff) format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Proxima Nova Rg";
+  src: url(../fonts/ProximaNova-Regular.woff2) format("woff2"), url(../fonts/ProximaNova-Regular.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Proxima Nova Rg", sans-serif;
+  font-size: 1rem;
+  position: relative;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+ul li {
+  font-size: 19px;
+  line-height: 130%;
+}
+
+h2 {
+  font-family: "Proxima Nova Sb", sans-serif;
+  font-size: 30px;
+  line-height: 130%;
+  letter-spacing: -0.02em;
+}
+
+header {
+  background-color: #000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  padding: 0 30px;
+  position: fixed;
+  z-index: 10;
+}
+header a {
+  color: white;
+}
+
+.header__wrapper {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__wrapper p {
+  color: white;
+  font-size: 19px;
+  line-height: 110%;
+}
+
+a {
+  cursor: pointer;
+  font-size: 19px;
+  line-height: 130%;
+  letter-spacing: -0.02em;
+  font-weight: 400;
+  transition: color 0.3s;
+  text-decoration: none;
+}
+a:not(.btn):hover {
+  transition: color 0.3s;
+}
+
+.text-grey {
+  color: #A5A5BB;
+}
+
+.content {
+  padding: 54px 0 93px;
+  background: #F8F8FD;
+  margin: 90px 0 0;
+}
+
+.content__wrapper .progress__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.content__wrapper .progress__title .btn-arrow {
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  min-height: 50px;
+  background: #F8F8FD;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.content__wrapper .progress__title .btn-arrow svg {
+  transform: rotate(180deg);
+  transition: transform 0.3s;
+}
+.content__wrapper .progress__body {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.3s;
+  position: static;
+}
+.content__wrapper .progress__categories {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.4s;
+}
+.content__wrapper .open-body .progress__title .btn-arrow svg {
+  transform: rotate(0deg);
+}
+
+@media (max-width: 767px) {
+  .content__wrapper .progress__title {
+    align-items: flex-start;
+  }
+  .content__wrapper .progress__title .btn-arrow {
+    height: 35px;
+    width: 35px;
+    min-width: 35px;
+    min-height: 35px;
+  }
+  .content__wrapper .progress__title .btn-arrow svg {
+    width: 16px;
+  }
+}
+.shedule__body {
+  background: #FFFFFF;
+  border-radius: 10px;
+  padding: 26px;
+  margin-bottom: 30px;
+}
+
+.shedule__paid {
+  padding-bottom: 65px;
+  margin-bottom: 72px;
+}
+
+.course-main h2 {
+  margin-bottom: 30px;
+}
+
+.course__progress .free-lessons {
+  margin-top: 23px;
+}
+.course__progress ul .list-item {
+  position: relative;
+  font-weight: 400;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: background 0.3s;
+  display: flex;
+  align-items: center;
+}
+.course__progress ul .list-item:not(.selected):hover {
+  background: #F8F8FD;
+  transition: background 0.3s;
+}
+.course__progress ul .list-item a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-right: 65px;
+}
+.course__progress ul .list-item .title-text {
+  padding-left: 60px;
+  display: flex;
+  align-items: center;
+  color: #9090A9;
+}
+.course__progress ul .list-item .title-text:hover {
+  color: #9090A9;
+}
+.course__progress ul .list-item .title-text svg {
+  margin-right: 11px;
+}
+.course__progress ul .list-item span {
+  color: #9090A9;
+}
+.course__progress ul .list-item .date {
+  color: #9090A9;
+  margin-left: auto;
+}
+.course__progress ul .course__block {
+  margin-top: 33px;
+  margin-bottom: 7px;
+  margin-left: 25px;
+}
+.course__progress ul .available span {
+  color: black;
+}
+.course__progress ul .available .title-text {
+  color: black;
+}
+.course__progress ul .available .title-text svg {
+  min-width: 8px;
+}
+.course__progress ul .available .title-text svg circle {
+  fill: #8DE300;
+}
+.course__progress ul .available .title-text:hover {
+  color: #0500FF;
+}
+.course__progress ul .available .date {
+  color: black;
+}
+.course__progress ul .number {
+  position: absolute;
+  left: 25px;
+}
+
+.footer p {
+  font-size: 19px;
+  line-height: 130%;
+  padding-right: 15px;
+}
+.footer a:not(:last-child) {
+  margin-right: 30px;
+}
+.footer .top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  grid-row-gap: 20px;
+}
+.footer .bottom {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 24px;
+  grid-row-gap: 20px;
+}
+.footer .bottom .footer-left {
+  padding-right: 15px;
+}
+
+.btn {
+  cursor: pointer;
+  font-family: "Proxima Nova Sb", sans-serif;
+}
+
+.content__wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.content__wrapper .breadcrumbs {
+  font-size: 19px;
+}
+.content__wrapper h1 {
+  font-weight: 400;
+  font-size: 5rem;
+  line-height: 110%;
+  letter-spacing: -0.04em;
+  margin-top: 23px;
+  padding-right: 15px;
+  margin-bottom: 43px;
+}
+.content__wrapper .content-item {
+  background: #FFF;
+  border-radius: 10px;
+}
+.content__wrapper .content-item:not(:last-child) {
+  margin-bottom: 60px;
+}
+
+@media (max-width: 1360px) {
+  html {
+    font-size: 14px;
+  }
+
+  .content {
+    padding: 40px 30px;
+  }
+}
+@media (max-width: 767px) {
+  h2 {
+    font-size: 25px;
+    padding-right: 10px;
+  }
+
+  a {
+    font-size: 16px;
+  }
+
+  html {
+    font-size: 10px;
+  }
+
+  .header {
+    padding: 0 15px;
+    height: 64px;
+  }
+  .header p {
+    font-size: 16px;
+  }
+
+  .header__logo {
+    width: 50px;
+  }
+
+  ul p {
+    font-size: 14px;
+  }
+  ul .list-item {
+    font-size: 16px;
+  }
+  ul .list-item .number {
+    left: 15px;
+  }
+
+  .course-main h2 {
+    margin-bottom: 15px;
+  }
+
+  .content {
+    margin-top: 64px;
+    padding: 20px 15px;
+  }
+
+  .footer p {
+    font-size: 16px;
+  }
+  .footer .top {
+    grid-row-gap: 12px;
+  }
+  .footer .bottom {
+    margin-top: 0;
+    grid-row-gap: 0;
+  }
+  .footer .bottom .footer-left {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .footer .bottom .footer-left a {
+    margin-bottom: 12px;
+  }
+  .footer .messengers {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .footer .messengers a {
+    margin-bottom: 12px;
+  }
+  .footer a:not(:last-child) {
+    margin-right: 15px;
+  }
+
+  .shedule__body {
+    margin-bottom: 18px;
+    padding: 15px;
+  }
+
+  .shedule__paid {
+    margin-bottom: 30px;
+    padding-bottom: 40px;
+  }
+
+  .li__title {
+    display: flex;
+    align-items: center;
+  }
+
+  .course__progress .free-lessons {
+    margin-top: 15px;
+  }
+  .course__progress ul .list-item a {
+    padding-right: 15px;
+    flex-wrap: wrap;
+  }
+  .course__progress ul .list-item .number {
+    left: 20px;
+  }
+  .course__progress ul .list-item .title-text {
+    padding-left: 45px;
+  }
+  .course__progress ul .list-item .title-text svg {
+    min-width: 8px;
+    min-height: 8px;
+  }
+  .course__progress ul .list-item .date {
+    width: 100%;
+    padding-left: 65px;
+    margin-left: 0;
+    margin-top: 5px;
+  }
+  .course__progress ul .course__block {
+    margin-top: 20px;
+  }
+
+  .content__wrapper .breadcrumbs {
+    font-size: 16px;
+  }
+  .content__wrapper h1 {
+    margin-top: 12px;
+    margin-bottom: 40px;
+  }
+  .content__wrapper .content-item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+/*# sourceMappingURL=shedule.css.map */
