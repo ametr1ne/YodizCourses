@@ -10,7 +10,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="<?= get_template_directory_uri() ?>/assets/css/paid_lesson.min.css"/>
+    <link rel="stylesheet" href="<?= get_template_directory_uri() ?>/assets/css/paid_lesson.css"/>
     <link rel="icon" type="image/x-icon" href="<?= get_template_directory_uri() ?>/assets/img/favicon.svg">
     <title><?php the_field( 'head_title' ) ?></title>
 	<?php wp_head(); ?>
@@ -34,7 +34,7 @@
     <div class="content">
         <div class="content__wrapper">
 
-            <p class="breadcrumbs text-grey"><a href="https://lk.yodizschool.ru/designer/">
+            <p class="breadcrumbs text-grey"><a href="<?php if (getenv("HTTP_REFERER") === 'https://lk.yodizschool.ru/designer2/') echo 'https://lk.yodizschool.ru/designer2/'; else if (getenv("HTTP_REFERER") === 'https://lk.yodizschool.ru/designer3/') echo 'https://lk.yodizschool.ru/designer3/'; else echo 'https://lk.yodizschool.ru/designer/';?>">
                     <svg width="15" version="1.1" xmlns="http://www.w3.org/2000/svg" height="15" viewBox="0 0 64 64"
                          xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 64 64">
                         <g>

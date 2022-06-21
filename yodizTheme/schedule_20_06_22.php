@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Расписание платного курса *
+ * Template Name: Расписание платного курса от 20 июня 2022 *
  */
 ?>
 
@@ -30,8 +30,8 @@
 <main class="main">
     <div class="content">
         <div class="content__wrapper">
-            <p class="breadcrumbs text-grey"><?php the_field( 'lesson_num' ) ?></p>
-            <h1><?php the_field( 'title_name' ) ?></h1>
+            <p class="breadcrumbs text-grey"><?php the_field('lesson_num') ?></p>
+            <h1><?php the_field('title_name') ?></h1>
 
             <div class="shedule__body">
                 <div class="course-free">
@@ -53,16 +53,17 @@
                                 <div class="course__progress">
                                     <ul class="lessons-list free-lessons">
                                         <li class="list-item <?php $course = get_field('free_course');
-                                        $courseItem = $course['free_intro']; if ($courseItem['available']) {
-	                                        echo 'available';
+                                        $courseItem = $course['free_intro'];
+                                        if ($courseItem['available']) {
+                                            echo 'available';
                                         } ?>">
                                             <a class="link" <?php
-	                                        if ( $courseItem['available'] ) {
-		                                        ?>
+                                            if ($courseItem['available']) {
+                                                ?>
                                                 href="<?php echo $courseItem['link'] ?>"
-		                                        <?php
-	                                        }
-	                                        ?>>
+                                                <?php
+                                            }
+                                            ?>>
                                                 <p class="title-text">
                                                     <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
                                                          xmlns="http://www.w3.org/2000/svg">
@@ -72,16 +73,17 @@
                                                 </p>
                                             </a>
                                         </li>
-                                        <li class="list-item <?php $courseItem = $course['free_1']; if ($courseItem['available']) {
-	                                        echo 'available';
+                                        <li class="list-item <?php $courseItem = $course['free_1'];
+                                        if ($courseItem['available']) {
+                                            echo 'available';
                                         } ?>">
                                             <a class="link" <?php
-	                                        if ( $courseItem['available'] ) {
-		                                        ?>
+                                            if ($courseItem['available']) {
+                                                ?>
                                                 href="<?php echo $courseItem['link'] ?>"
-		                                        <?php
-	                                        }
-	                                        ?>>
+                                                <?php
+                                            }
+                                            ?>>
                                                 <span class="number">1</span>
                                                 <p class="title-text">
                                                     <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
@@ -92,16 +94,17 @@
                                                 </p>
                                             </a>
                                         </li>
-                                        <li class="list-item <?php $courseItem = $course['free_2']; if ($courseItem['available']) {
-	                                        echo 'available';
+                                        <li class="list-item <?php $courseItem = $course['free_2'];
+                                        if ($courseItem['available']) {
+                                            echo 'available';
                                         } ?>">
                                             <a class="link" <?php
-	                                        if ( $courseItem['available'] ) {
-		                                        ?>
+                                            if ($courseItem['available']) {
+                                                ?>
                                                 href="<?php echo $courseItem['link'] ?>"
-		                                        <?php
-	                                        }
-	                                        ?>>
+                                                <?php
+                                            }
+                                            ?>>
                                                 <span class="number">2</span>
                                                 <p class="title-text">
                                                     <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
@@ -112,16 +115,17 @@
                                                 </p>
                                             </a>
                                         </li>
-                                        <li class="list-item <?php $courseItem = $course['free_3']; if ($courseItem['available']) {
-	                                        echo 'available';
+                                        <li class="list-item <?php $courseItem = $course['free_3'];
+                                        if ($courseItem['available']) {
+                                            echo 'available';
                                         } ?>">
                                             <a class="link" <?php
-	                                        if ( $courseItem['available'] ) {
-		                                        ?>
+                                            if ($courseItem['available']) {
+                                                ?>
                                                 href="<?php echo $courseItem['link'] ?>"
-		                                        <?php
-	                                        }
-	                                        ?>>
+                                                <?php
+                                            }
+                                            ?>>
                                                 <span class="number">3</span>
                                                 <p class="title-text">
                                                     <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
@@ -132,16 +136,17 @@
                                                 </p>
                                             </a>
                                         </li>
-                                        <li class="list-item <?php $courseItem = $course['free_4']; if ($courseItem['available']) {
-	                                        echo 'available';
+                                        <li class="list-item <?php $courseItem = $course['free_4'];
+                                        if ($courseItem['available']) {
+                                            echo 'available';
                                         } ?>">
                                             <a class="link" <?php
-	                                        if ( $courseItem['available'] ) {
-		                                        ?>
+                                            if ($courseItem['available']) {
+                                                ?>
                                                 href="<?php echo $courseItem['link'] ?>"
-		                                        <?php
-	                                        }
-	                                        ?>>
+                                                <?php
+                                            }
+                                            ?>>
                                                 <span class="number">4</span>
                                                 <p class="title-text">
                                                     <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
@@ -152,16 +157,17 @@
                                                 </p>
                                             </a>
                                         </li>
-                                        <li class="list-item <?php $courseItem = $course['free_5']; if ($courseItem['available']) {
-	                                        echo 'available';
+                                        <li class="list-item <?php $courseItem = $course['free_5'];
+                                        if ($courseItem['available']) {
+                                            echo 'available';
                                         } ?>">
                                             <a class="link" <?php
-	                                        if ( $courseItem['available'] ) {
-		                                        ?>
+                                            if ($courseItem['available']) {
+                                                ?>
                                                 href="<?php echo $courseItem['link'] ?>"
-		                                        <?php
-	                                        }
-	                                        ?>>
+                                                <?php
+                                            }
+                                            ?>>
                                                 <span class="number">5</span>
                                                 <p class="title-text">
                                                     <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
@@ -186,18 +192,18 @@
                     </div>
                     <div class="course__progress">
                         <ul class="lessons-list paid-lessons">
-                            <li class="list-item <?php $course = get_field( 'paid_course' );
+                            <li class="list-item <?php $course = get_field('paid_course');
                             $courseItem = $course['paid_intro'];
                             if ($courseItem['available']) {
-                            echo 'available';
+                                echo 'available';
                             } ?>">
                                 <a class="link" <?php
-								if ( $courseItem['available'] ) {
-									?>
-                                        href="<?php echo $courseItem['link'] ?>"
-									<?php
-								}
-								?>>
+                                if ($courseItem['available']) {
+                                    ?>
+                                    href="<?php echo $courseItem['link'] ?>"
+                                    <?php
+                                }
+                                ?>>
                                     <div class="li__title">
                                         <p class="title-text">
                                             <svg width="8" height="8" viewBox="0 0 9 8" fill="none"
@@ -207,22 +213,23 @@
                                             Введение
                                         </p>
                                     </div>
-                                    <p class="date">11 мая, 20:00 мск</p>
+                                    <p class="date">20 июня, 20:00 мск</p>
                                 </a>
                             </li>
                             <li class="list-block">
                                 <p class="course__block text-grey">Блок 1. Технический дизайн</p>
                             </li>
-                            <li class="list-item <?php $courseItem = $course['paid_1']; if ($courseItem['available']) {
-	                            echo 'available';
+                            <li class="list-item <?php $courseItem = $course['paid_1'];
+                            if ($courseItem['available']) {
+                                echo 'available';
                             } ?>">
                                 <a class="link" <?php
-	                            if ( $courseItem['available'] ) {
-		                            ?>
+                                if ($courseItem['available']) {
+                                    ?>
                                     href="<?php echo $courseItem['link'] ?>"
-		                            <?php
-	                            }
-	                            ?>>
+                                    <?php
+                                }
+                                ?>>
                                     <div class="li__title">
                                         <span class="number">1</span>
                                         <p class="title-text">
@@ -233,19 +240,20 @@
                                             Основы тех. дизайна в Photoshop
                                         </p>
                                     </div>
-                                    <p class="date">11 мая, 20:00 мск</p>
+                                    <p class="date">30 мая, 20:00 мск</p>
                                 </a>
                             </li>
-                            <li class="list-item <?php $courseItem = $course['paid_2']; if ($courseItem['available']) {
-	                            echo 'available';
+                            <li class="list-item <?php $courseItem = $course['paid_2'];
+                            if ($courseItem['available']) {
+                                echo 'available';
                             } ?>">
                                 <a class="link" <?php
-	                            if ( $courseItem['available'] ) {
-		                            ?>
+                                if ($courseItem['available']) {
+                                    ?>
                                     href="<?php echo $courseItem['link'] ?>"
-		                            <?php
-	                            }
-	                            ?>>
+                                    <?php
+                                }
+                                ?>>
                                     <div class="li__title">
                                         <span class="number">45</span>
                                         <p class="title-text">
@@ -256,19 +264,20 @@
                                             Тех. дизайн сложных объектов
                                         </p>
                                     </div>
-                                    <p class="date">16 мая, 20:00 мск</p>
+                                    <p class="date">04 июня, 20:00 мск</p>
                                 </a>
                             </li>
-                            <li class="list-item <?php $courseItem = $course['paid_3']; if ($courseItem['available']) {
-	                            echo 'available';
+                            <li class="list-item <?php $courseItem = $course['paid_3'];
+                            if ($courseItem['available']) {
+                                echo 'available';
                             } ?>">
                                 <a class="link" <?php
-	                            if ( $courseItem['available'] ) {
-		                            ?>
+                                if ($courseItem['available']) {
+                                    ?>
                                     href="<?php echo $courseItem['link'] ?>"
-		                            <?php
-	                            }
-	                            ?>>
+                                    <?php
+                                }
+                                ?>>
                                     <div class="li__title">
                                         <span class="number">3</span>
                                         <p class="title-text">
@@ -279,23 +288,24 @@
                                             Изометрия
                                         </p>
                                     </div>
-                                    <p class="date">21 мая, 20:00 мск</p>
+                                    <p class="date">09 июня, 20:00 мск</p>
                                 </a>
                             </li>
 
                             <li class="list-block">
                                 <p class="course__block text-grey">Блок 2. Баннеры</p>
                             </li>
-                            <li class="list-item <?php $courseItem = $course['paid_4']; if ($courseItem['available']) {
-	                            echo 'available';
+                            <li class="list-item <?php $courseItem = $course['paid_4'];
+                            if ($courseItem['available']) {
+                                echo 'available';
                             } ?>">
                                 <a class="link" <?php
-	                            if ( $courseItem['available'] ) {
-		                            ?>
+                                if ($courseItem['available']) {
+                                    ?>
                                     href="<?php echo $courseItem['link'] ?>"
-		                            <?php
-	                            }
-	                            ?>>
+                                    <?php
+                                }
+                                ?>>
                                     <div class="li__title">
                                         <span class="number">4</span>
                                         <p class="title-text">
@@ -306,19 +316,20 @@
                                             Правила компоновки
                                         </p>
                                     </div>
-                                    <p class="date">26 мая, 20:00 мск</p>
+                                    <p class="date">14 июня, 20:00 мск</p>
 
                                 </a></li>
-                            <li class="list-item <?php $courseItem = $course['paid_5']; if ($courseItem['available']) {
-	                            echo 'available';
+                            <li class="list-item <?php $courseItem = $course['paid_5'];
+                            if ($courseItem['available']) {
+                                echo 'available';
                             } ?>">
                                 <a class="link" <?php
-	                            if ( $courseItem['available'] ) {
-		                            ?>
+                                if ($courseItem['available']) {
+                                    ?>
                                     href="<?php echo $courseItem['link'] ?>"
-		                            <?php
-	                            }
-	                            ?>>
+                                    <?php
+                                }
+                                ?>>
                                     <div class="li__title">
                                         <span class="number">5</span>
                                         <p class="title-text">
@@ -329,19 +340,20 @@
                                             Баннеры для продажи товаров
                                         </p>
                                     </div>
-                                    <p class="date">31 мая, 20:00 мск</p>
+                                    <p class="date">19 июня, 20:00 мск</p>
 
                                 </a></li>
-                            <li class="list-item <?php $courseItem = $course['paid_6']; if ($courseItem['available']) {
-	                            echo 'available';
+                            <li class="list-item <?php $courseItem = $course['paid_6'];
+                            if ($courseItem['available']) {
+                                echo 'available';
                             } ?>">
                                 <a class="link" <?php
-	                            if ( $courseItem['available'] ) {
-		                            ?>
+                                if ($courseItem['available']) {
+                                    ?>
                                     href="<?php echo $courseItem['link'] ?>"
-		                            <?php
-	                            }
-	                            ?>>
+                                    <?php
+                                }
+                                ?>>
                                     <div class="li__title">
                                         <span class="number">6</span>
                                         <p class="title-text">
@@ -352,7 +364,7 @@
                                             Баннеры для продажи услуг
                                         </p>
                                     </div>
-                                    <p class="date">5 июня, 20:00 мск</p>
+                                    <p class="date">24 июня, 20:00 мск</p>
 
                                 </a></li>
 
@@ -360,16 +372,17 @@
                                 <p class="course__block text-grey">Блок 3. Моушн-дизайн</p>
                             </li>
 
-                            <li class="list-item <?php $courseItem = $course['paid_7']; if ($courseItem['available']) {
-	                            echo 'available';
+                            <li class="list-item <?php $courseItem = $course['paid_7'];
+                            if ($courseItem['available']) {
+                                echo 'available';
                             } ?>">
                                 <a class="link" <?php
-	                            if ( $courseItem['available'] ) {
-		                            ?>
+                                if ($courseItem['available']) {
+                                    ?>
                                     href="<?php echo $courseItem['link'] ?>"
-		                            <?php
-	                            }
-	                            ?>>
+                                    <?php
+                                }
+                                ?>>
                                     <div class="li__title">
                                         <span class="number">7</span>
                                         <p class="title-text">
@@ -380,19 +393,20 @@
                                             Анимация текста в Animate
                                         </p>
                                     </div>
-                                    <p class="date">10 июня, 20:00 мск</p>
+                                    <p class="date">29 июня, 20:00 мск</p>
 
                                 </a></li>
-                            <li class="list-item <?php $courseItem = $course['paid_8']; if ($courseItem['available']) {
-	                            echo 'available';
+                            <li class="list-item <?php $courseItem = $course['paid_8'];
+                            if ($courseItem['available']) {
+                                echo 'available';
                             } ?>">
                                 <a class="link" <?php
-	                            if ( $courseItem['available'] ) {
-		                            ?>
+                                if ($courseItem['available']) {
+                                    ?>
                                     href="<?php echo $courseItem['link'] ?>"
-		                            <?php
-	                            }
-	                            ?>>
+                                    <?php
+                                }
+                                ?>>
                                     <div class="li__title">
                                         <span class="number">8</span>
                                         <p class="title-text">
@@ -403,19 +417,20 @@
                                             Анимация объектов
                                         </p>
                                     </div>
-                                    <p class="date">15 июня, 20:00 мск</p>
+                                    <p class="date">04 июля, 20:00 мск</p>
 
                                 </a></li>
-                            <li class="list-item <?php $courseItem = $course['paid_9']; if ($courseItem['available']) {
-	                            echo 'available';
+                            <li class="list-item <?php $courseItem = $course['paid_9'];
+                            if ($courseItem['available']) {
+                                echo 'available';
                             } ?>">
                                 <a class="link" <?php
-	                            if ( $courseItem['available'] ) {
-		                            ?>
+                                if ($courseItem['available']) {
+                                    ?>
                                     href="<?php echo $courseItem['link'] ?>"
-		                            <?php
-	                            }
-	                            ?>>
+                                    <?php
+                                }
+                                ?>>
                                     <div class="li__title">
                                         <span class="number">9</span>
                                         <p class="title-text">
@@ -426,19 +441,20 @@
                                             Анимированный баннер
                                         </p>
                                     </div>
-                                    <p class="date">20 июня, 20:00 мск</p>
+                                    <p class="date">9 июля, 20:00 мск</p>
 
                                 </a></li>
-                            <li class="list-item <?php $courseItem = $course['paid_10']; if ($courseItem['available']) {
-	                            echo 'available';
+                            <li class="list-item <?php $courseItem = $course['paid_10'];
+                            if ($courseItem['available']) {
+                                echo 'available';
                             } ?>">
                                 <a class="link" <?php
-	                            if ( $courseItem['available'] ) {
-		                            ?>
+                                if ($courseItem['available']) {
+                                    ?>
                                     href="<?php echo $courseItem['link'] ?>"
-		                            <?php
-	                            }
-	                            ?>>
+                                    <?php
+                                }
+                                ?>>
                                     <div class="li__title">
                                         <span class="number">10</span>
                                         <p class="title-text">
@@ -449,19 +465,20 @@
                                             Параллакс эффект
                                         </p>
                                     </div>
-                                    <p class="date">25 июня, 20:00 мск</p>
+                                    <p class="date">14 июля, 20:00 мск</p>
 
                                 </a></li>
-                            <li class="list-item <?php $courseItem = $course['paid_11']; if ($courseItem['available']) {
-	                            echo 'available';
+                            <li class="list-item <?php $courseItem = $course['paid_11'];
+                            if ($courseItem['available']) {
+                                echo 'available';
                             } ?>">
                                 <a class="link" <?php
-	                            if ( $courseItem['available'] ) {
-		                            ?>
+                                if ($courseItem['available']) {
+                                    ?>
                                     href="<?php echo $courseItem['link'] ?>"
-		                            <?php
-	                            }
-	                            ?>>
+                                    <?php
+                                }
+                                ?>>
                                     <div class="li__title">
                                         <span class="number">11</span>
                                         <p class="title-text">
@@ -472,7 +489,7 @@
                                             Анимация персонажа
                                         </p>
                                     </div>
-                                    <p class="date">30 июня, 20:00 мск</p>
+                                    <p class="date">19 июля, 20:00 мск</p>
 
                                 </a></li>
 
@@ -480,16 +497,17 @@
                                 <p class="course__block text-grey">Блок 4. Векторная графика</p>
                             </li>
 
-                            <li class="list-item <?php $courseItem = $course['paid_12']; if ($courseItem['available']) {
-	                            echo 'available';
+                            <li class="list-item <?php $courseItem = $course['paid_12'];
+                            if ($courseItem['available']) {
+                                echo 'available';
                             } ?>">
                                 <a class="link" <?php
-	                            if ( $courseItem['available'] ) {
-		                            ?>
+                                if ($courseItem['available']) {
+                                    ?>
                                     href="<?php echo $courseItem['link'] ?>"
-		                            <?php
-	                            }
-	                            ?>>
+                                    <?php
+                                }
+                                ?>>
                                     <div class="li__title">
                                         <span class="number">12</span>
                                         <p class="title-text">
@@ -500,19 +518,20 @@
                                             Рисуем иконки в Illustrator
                                         </p>
                                     </div>
-                                    <p class="date">5 июля, 20:00 мск</p>
+                                    <p class="date">24 июля, 20:00 мск</p>
 
                                 </a></li>
-                            <li class="list-item <?php $courseItem = $course['paid_13']; if ($courseItem['available']) {
-	                            echo 'available';
+                            <li class="list-item <?php $courseItem = $course['paid_13'];
+                            if ($courseItem['available']) {
+                                echo 'available';
                             } ?>">
                                 <a class="link" <?php
-	                            if ( $courseItem['available'] ) {
-		                            ?>
+                                if ($courseItem['available']) {
+                                    ?>
                                     href="<?php echo $courseItem['link'] ?>"
-		                            <?php
-	                            }
-	                            ?>>
+                                    <?php
+                                }
+                                ?>>
                                     <div class="li__title">
                                         <span class="number">13</span>
                                         <p class="title-text">
@@ -523,19 +542,20 @@
                                             Векторные изображения
                                         </p>
                                     </div>
-                                    <p class="date">10 июля, 20:00 мск</p>
+                                    <p class="date">29 июля, 20:00 мск</p>
 
                                 </a></li>
-                            <li class="list-item <?php $courseItem = $course['paid_14']; if ($courseItem['available']) {
-	                            echo 'available';
+                            <li class="list-item <?php $courseItem = $course['paid_14'];
+                            if ($courseItem['available']) {
+                                echo 'available';
                             } ?>">
                                 <a class="link" <?php
-	                            if ( $courseItem['available'] ) {
-		                            ?>
+                                if ($courseItem['available']) {
+                                    ?>
                                     href="<?php echo $courseItem['link'] ?>"
-		                            <?php
-	                            }
-	                            ?>>
+                                    <?php
+                                }
+                                ?>>
                                     <div class="li__title">
                                         <span class="number">14</span>
                                         <p class="title-text">
@@ -546,19 +566,20 @@
                                             Разработка логотипа
                                         </p>
                                     </div>
-                                    <p class="date">15 июля, 20:00 мск</p>
+                                    <p class="date">03 августа, 20:00 мск</p>
 
                                 </a></li>
-                            <li class="list-item <?php $courseItem = $course['paid_15']; if ($courseItem['available']) {
-	                            echo 'available';
+                            <li class="list-item <?php $courseItem = $course['paid_15'];
+                            if ($courseItem['available']) {
+                                echo 'available';
                             } ?>">
                                 <a class="link" <?php
-	                            if ( $courseItem['available'] ) {
-		                            ?>
+                                if ($courseItem['available']) {
+                                    ?>
                                     href="<?php echo $courseItem['link'] ?>"
-		                            <?php
-	                            }
-	                            ?>>
+                                    <?php
+                                }
+                                ?>>
                                     <div class="li__title">
                                         <span class="number">15</span>
                                         <p class="title-text">
@@ -569,7 +590,7 @@
                                             Айдентика
                                         </p>
                                     </div>
-                                    <p class="date">20 июля, 20:00 мск</p>
+                                    <p class="date">08 августа, 20:00 мск</p>
 
                                 </a></li>
 
@@ -577,16 +598,17 @@
                                 <p class="course__block text-grey">Блок 5. UX</p>
                             </li>
 
-                            <li class="list-item <?php $courseItem = $course['paid_16']; if ($courseItem['available']) {
-	                            echo 'available';
+                            <li class="list-item <?php $courseItem = $course['paid_16'];
+                            if ($courseItem['available']) {
+                                echo 'available';
                             } ?>">
                                 <a class="link" <?php
-	                            if ( $courseItem['available'] ) {
-		                            ?>
+                                if ($courseItem['available']) {
+                                    ?>
                                     href="<?php echo $courseItem['link'] ?>"
-		                            <?php
-	                            }
-	                            ?>>
+                                    <?php
+                                }
+                                ?>>
                                     <div class="li__title">
                                         <span class="number">16</span>
                                         <p class="title-text">
@@ -597,19 +619,20 @@
                                             Анализ целевой аудитории
                                         </p>
                                     </div>
-                                    <p class="date">25 июля, 20:00 мск</p>
+                                    <p class="date">13 августа, 20:00 мск</p>
 
                                 </a></li>
-                            <li class="list-item <?php $courseItem = $course['paid_17']; if ($courseItem['available']) {
-	                            echo 'available';
+                            <li class="list-item <?php $courseItem = $course['paid_17'];
+                            if ($courseItem['available']) {
+                                echo 'available';
                             } ?>">
                                 <a class="link" <?php
-	                            if ( $courseItem['available'] ) {
-		                            ?>
+                                if ($courseItem['available']) {
+                                    ?>
                                     href="<?php echo $courseItem['link'] ?>"
-		                            <?php
-	                            }
-	                            ?>>
+                                    <?php
+                                }
+                                ?>>
                                     <div class="li__title">
                                         <span class="number">17</span>
                                         <p class="title-text">
@@ -620,7 +643,7 @@
                                             Прототипирование веб-проектов
                                         </p>
                                     </div>
-                                    <p class="date">30 июля, 20:00 мск</p>
+                                    <p class="date">18 августа, 20:00 мск</p>
 
                                 </a></li>
 
@@ -628,16 +651,17 @@
                                 <p class="course__block text-grey">Блок 6. UI</p>
                             </li>
 
-                            <li class="list-item <?php $courseItem = $course['paid_18']; if ($courseItem['available']) {
-	                            echo 'available';
+                            <li class="list-item <?php $courseItem = $course['paid_18'];
+                            if ($courseItem['available']) {
+                                echo 'available';
                             } ?>">
                                 <a class="link" <?php
-	                            if ( $courseItem['available'] ) {
-		                            ?>
+                                if ($courseItem['available']) {
+                                    ?>
                                     href="<?php echo $courseItem['link'] ?>"
-		                            <?php
-	                            }
-	                            ?>>
+                                    <?php
+                                }
+                                ?>>
                                     <div class="li__title">
                                         <span class="number">18</span>
                                         <p class="title-text">
@@ -648,19 +672,20 @@
                                             Виды сайтов
                                         </p>
                                     </div>
-                                    <p class="date">4 августа, 20:00 мск</p>
+                                    <p class="date">23 августа, 20:00 мск</p>
 
                                 </a></li>
-                            <li class="list-item <?php $courseItem = $course['paid_19']; if ($courseItem['available']) {
-	                            echo 'available';
+                            <li class="list-item <?php $courseItem = $course['paid_19'];
+                            if ($courseItem['available']) {
+                                echo 'available';
                             } ?>">
                                 <a class="link" <?php
-	                            if ( $courseItem['available'] ) {
-		                            ?>
+                                if ($courseItem['available']) {
+                                    ?>
                                     href="<?php echo $courseItem['link'] ?>"
-		                            <?php
-	                            }
-	                            ?>>
+                                    <?php
+                                }
+                                ?>>
                                     <div class="li__title">
                                         <span class="number">19</span>
                                         <p class="title-text">
@@ -671,19 +696,20 @@
                                             Favicon
                                         </p>
                                     </div>
-                                    <p class="date">9 августа, 20:00 мск</p>
+                                    <p class="date">28 августа, 20:00 мск</p>
 
                                 </a></li>
-                            <li class="list-item <?php $courseItem = $course['paid_20']; if ($courseItem['available']) {
-	                            echo 'available';
+                            <li class="list-item <?php $courseItem = $course['paid_20'];
+                            if ($courseItem['available']) {
+                                echo 'available';
                             } ?>">
                                 <a class="link" <?php
-	                            if ( $courseItem['available'] ) {
-		                            ?>
+                                if ($courseItem['available']) {
+                                    ?>
                                     href="<?php echo $courseItem['link'] ?>"
-		                            <?php
-	                            }
-	                            ?>>
+                                    <?php
+                                }
+                                ?>>
                                     <div class="li__title">
                                         <span class="number">20</span>
                                         <p class="title-text">
@@ -694,19 +720,20 @@
                                             Главный экран
                                         </p>
                                     </div>
-                                    <p class="date">14 августа, 20:00 мск</p>
+                                    <p class="date">02 сентября, 20:00 мск</p>
                                 </a>
                             </li>
-                            <li class="list-item <?php $courseItem = $course['paid_21']; if ($courseItem['available']) {
-	                            echo 'available';
+                            <li class="list-item <?php $courseItem = $course['paid_21'];
+                            if ($courseItem['available']) {
+                                echo 'available';
                             } ?>">
                                 <a class="link" <?php
-	                            if ( $courseItem['available'] ) {
-		                            ?>
+                                if ($courseItem['available']) {
+                                    ?>
                                     href="<?php echo $courseItem['link'] ?>"
-		                            <?php
-	                            }
-	                            ?>>
+                                    <?php
+                                }
+                                ?>>
                                     <div class="li__title">
                                         <span class="number">21</span>
                                         <p class="title-text">
@@ -717,19 +744,20 @@
                                             Основные блоки сайта
                                         </p>
                                     </div>
-                                    <p class="date">19 августа, 20:00 мск</p>
+                                    <p class="date">07 сентября, 20:00 мск</p>
                                 </a>
                             </li>
-                            <li class="list-item <?php $courseItem = $course['paid_22']; if ($courseItem['available']) {
-	                            echo 'available';
+                            <li class="list-item <?php $courseItem = $course['paid_22'];
+                            if ($courseItem['available']) {
+                                echo 'available';
                             } ?>">
                                 <a class="link" <?php
-	                            if ( $courseItem['available'] ) {
-		                            ?>
+                                if ($courseItem['available']) {
+                                    ?>
                                     href="<?php echo $courseItem['link'] ?>"
-		                            <?php
-	                            }
-	                            ?>>
+                                    <?php
+                                }
+                                ?>>
                                     <div class="li__title">
                                         <span class="number">22</span>
                                         <p class="title-text">
@@ -740,19 +768,20 @@
                                             Собираем лендинг в Figma
                                         </p>
                                     </div>
-                                    <p class="date">24 августа, 20:00 мск</p>
+                                    <p class="date">12 сентября, 20:00 мск</p>
                                 </a>
                             </li>
-                            <li class="list-item <?php $courseItem = $course['paid_23']; if ($courseItem['available']) {
-	                            echo 'available';
+                            <li class="list-item <?php $courseItem = $course['paid_23'];
+                            if ($courseItem['available']) {
+                                echo 'available';
                             } ?>">
                                 <a class="link" <?php
-	                            if ( $courseItem['available'] ) {
-		                            ?>
+                                if ($courseItem['available']) {
+                                    ?>
                                     href="<?php echo $courseItem['link'] ?>"
-		                            <?php
-	                            }
-	                            ?>>
+                                    <?php
+                                }
+                                ?>>
                                     <div class="li__title">
                                         <span class="number">23</span>
                                         <p class="title-text">
@@ -763,7 +792,7 @@
                                             Адаптивный дизайн
                                         </p>
                                     </div>
-                                    <p class="date">29 августа, 20:00 мск</p>
+                                    <p class="date">17 сентября, 20:00 мск</p>
                                 </a>
                             </li>
 
@@ -771,16 +800,17 @@
                                 <p class="course__block text-grey">Блок 7. Портфолио и кейс</p>
                             </li>
 
-                            <li class="list-item <?php $courseItem = $course['paid_24']; if ($courseItem['available']) {
-	                            echo 'available';
+                            <li class="list-item <?php $courseItem = $course['paid_24'];
+                            if ($courseItem['available']) {
+                                echo 'available';
                             } ?>">
                                 <a class="link" <?php
-	                            if ( $courseItem['available'] ) {
-		                            ?>
+                                if ($courseItem['available']) {
+                                    ?>
                                     href="<?php echo $courseItem['link'] ?>"
-		                            <?php
-	                            }
-	                            ?>>
+                                    <?php
+                                }
+                                ?>>
                                     <div class="li__title">
                                         <span class="number">24</span>
                                         <p class="title-text">
@@ -791,19 +821,20 @@
                                             Формируем пул работ в портфолио
                                         </p>
                                     </div>
-                                    <p class="date">3 сентября, 20:00 мск</p>
+                                    <p class="date">22 сентября, 20:00 мск</p>
                                 </a>
                             </li>
-                            <li class="list-item <?php $courseItem = $course['paid_25']; if ($courseItem['available']) {
-	                            echo 'available';
+                            <li class="list-item <?php $courseItem = $course['paid_25'];
+                            if ($courseItem['available']) {
+                                echo 'available';
                             } ?>">
                                 <a class="link" <?php
-	                            if ( $courseItem['available'] ) {
-		                            ?>
+                                if ($courseItem['available']) {
+                                    ?>
                                     href="<?php echo $courseItem['link'] ?>"
-		                            <?php
-	                            }
-	                            ?>>
+                                    <?php
+                                }
+                                ?>>
                                     <div class="li__title">
                                         <span class="number">25</span>
                                         <p class="title-text">
@@ -814,7 +845,7 @@
                                             Собираем кейс
                                         </p>
                                     </div>
-                                    <p class="date">8 сентября, 20:00 мск</p>
+                                    <p class="date">27 сентября, 20:00 мск</p>
                                 </a>
                             </li>
                         </ul>
@@ -851,5 +882,18 @@
         </div>
     </div>
 </main>
+<script>
+    let date = document.querySelectorAll('.date')
+    let startDate = new Date(2022, 5, 20)
+
+    document.querySelectorAll('.date').forEach(function (value, key) {
+        if (key > 0) {
+            const array = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря']
+
+            value.innerHTML = startDate.getDate() + ' ' + array[startDate.getMonth()] + ', 20:00 мск';
+            startDate.setDate(startDate.getDate() + 5);
+        }
+    })
+</script>
 </body>
 </html>

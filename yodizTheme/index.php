@@ -148,7 +148,7 @@ get_header();
                                          xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="4.71875" cy="4" r="4" fill="#D0D0E1"/>
                                     </svg>
-                                    Компоновки и построение блоков
+                                    Правила компоновки
                                 </a>
                             </li>
                             <li><span class="number">10</span>
